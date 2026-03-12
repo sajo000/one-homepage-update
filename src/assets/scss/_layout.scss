@@ -46,6 +46,8 @@
 .header-container .logo,
 .mobile-gnb__header .logo {
   //height: 44px;
+  display: flex;
+  align-items: center;
   color: #00C2DE;
   line-height: 1;
 
@@ -82,10 +84,8 @@
 }
 
 #header .nav__wrapper {
-  @include media-breakpoint-up(lg) {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
 }
 
 /* ========================================================================
@@ -250,6 +250,7 @@
     width: 150px;
   }
 }
+
 /*
 .footer-container > .container {
   @include media-breakpoint-up(lg) {
