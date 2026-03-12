@@ -1,0 +1,113 @@
+@use "variables2" as *;
+
+/* ========================================================================
+ * font-color
+*/
+.fc-primary {
+	color: $primary;
+}
+.fc-primary-typo {
+	color: $primary-typo
+}
+.fc-danger {
+	color: $danger;
+}
+.fc-danger-lite {
+	color: $danger-lite;
+}
+.fc-warning {
+	color: $warning;
+}
+.fc-warning-lite {
+	color: $warning-lite;
+}
+.fc-success {
+	color: $success;
+}
+.fc-success-lite {
+	color: $success-lite;
+}
+.fc-white {
+	color: $white;
+}
+.fc-eee {
+	color: $gray-ee;
+}
+.fc-ddd {
+	color: $gray-dd
+}
+.fc-999 {
+	color: $gray-99;
+}
+.fc-93 {
+	color: $gray-93;
+}
+.fc-666 {
+	color: $gray-66;
+}
+.fc-4e {
+	color: $gray-4e;
+}
+.fc-333 {
+	color: $gray-33;
+}
+.fc-black {
+	color: $black;
+}
+
+/* ========================================================================
+ * background-color
+*/
+.bg-primary {
+	background-color: $primary;
+}
+.bg-blue {
+	background-color: $bg-blue;
+}
+.bg-blue-gray {
+	background-color: $bg-blue-gray;
+}
+.bg-navy {
+	background-color: $bg-navy;
+}
+
+.bg-white {
+	background-color: $white;
+}
+.bg-gray-ee {
+	background-color: $gray-ee;
+}
+.bg-gray-dd {
+	background-color: $gray-dd
+}
+.bg-gray-99 {
+	background-color: $gray-99;
+}
+.bg-gray-66 {
+	background-color: $gray-66;
+}
+.bg-gray-33 {
+	background-color: $gray-33;
+}
+.bg-black {
+	background-color: $black;
+}
+
+/* ========================================================================
+ * font-weight
+*/
+.fw-normal {
+	font-weight: 400;
+}
+
+.fw-medium {
+	font-weight: 500;
+}
+
+.fw-semibold {
+	font-weight: 600;
+}
+
+.fw-bold {
+	font-weight: 700;
+}

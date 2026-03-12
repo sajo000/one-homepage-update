@@ -1,0 +1,94 @@
+{
+  "================================= 헤더 header.html": "=================================",
+  "service": "서비스",
+  "baro_dispatch": "바로출고",
+  "fulfillment": "풀필먼트",
+  "auth_signup": "회원가입",
+  " 🚀 여기까지 네비바 메뉴명": "=================================",
+
+
+  "================================= 푸터 footer.html": "=================================",
+  "footer_company_name": "법인명: 주식회사 델레오코리아",
+  "footer_ceo": "대표: 양중원",
+  "footer_address": "회사주소: 06164 서울특별시 강남구 테헤란로87길 36(삼성동, 도심공항타워) 12층 1201호",
+  "footer_business_registration_number": "사업자등록번호: 673-86-00253",
+  "footer_check_business_registration": "[사업자등록번호 확인]",
+
+
+  "================================= 메인(원배송) index.html": "=================================",
+  "one_hero_sub": "원배송",
+  "one_hero_title": "주문부터 재고관리, 해외 통관, 배송까지. <br>올인원 플랫폼 원배송",
+  "one_hero_btn_quote": "견적 문의하기",
+  "one_hero_btn_signup": "서비스 가입하기",
+  " 🚀 여기까지 원배송 서브페이지 상단 텍스트": "=================================",
+
+  "one_waste_time_text": "혹시 이런 문제로 시간을<br>낭비하고 계신가요?",
+
+  "one_waste_time_item1": "쇼핑몰마다 제각각인 주문을 <br>취합하느라 번거로우신가요?",
+  "one_waste_time_item2": "복잡한 해외 통관과 수출입 <br>서류 작업이 막막하신가요?",
+  "one_waste_time_item3": "실시간 재고가 맞지 않아 주문 <br>처리에 어려움을 겪으시나요?",
+  "one_waste_time_item4": "소량의 상품으로도 글로벌 <br>판매를 확장하고 싶으신가요?",
+  " 🚀 여기까지 원배송 서브페이지 시간 낭비 텍스트": "=================================",
+
+  "one_bg_in_banner_text1": "원배송이 도와드립니다.",
+  "one_bg_in_banner_text2": "원배송은 Cross Border e-Commerce에 특화된<br>배송 서비스로, 글로벌 비즈니스 사업에 필요한 모든 솔루션을 제공합니다.",
+  " 🚀 여기까지 원배송 서브페이지 배경 있는 배너 텍스트": "=================================",
+
+  "one_click_order_management_text": "모든 판매 채널의 주문,<br>클릭 한 번으로 통합 관리",
+  "one_click_order_management_content": "원배송이 반복업무 시간을 획기적으로 줄여드립니다.",
+
+  "one_click_order_management_item1_1": "API 연동을 통한 주문 자동 수집",
+  "one_click_order_management_item1_2": "카페24, Shopify, Amazon<small class=\"fs-m-12 fs-p-12\">(예정)</small>, TikTok Shop<small class=\"fs-m-12 fs-p-12\">(예정)</small> 등 국내, 글로벌 마켓 주문을 한 번에 확인 가능합니다.",
+  "one_click_order_management_item2_1": "대량 주문 일괄 처리",
+  "one_click_order_management_item2_2": "수백, 수천 건의 주문도 클릭 한 번으로 송장 출력부터 출고 요청까지 일괄 처리가 가능합니다.",
+  "one_click_order_management_item3_1": "워크플로우 단축",
+  "one_click_order_management_item3_2": "주문 등록시 재고할당부터 패킹, 출고까지 한번에 처리가 가능합니다.",
+  " 🚀 여기까지 원배송 서브페이지 모든 판매 채널의 주문, 클릭 한번으로 통합 관리 텍스트": "=================================",
+
+  "few_clicks_global_text": "클릭 몇 번으로,<br>비즈니스를 전 세계로 확장",
+  "few_clicks_global_content": "해외 진출의 가장 큰 장벽인 '물류 문제', 원배송이 가장 쉬운 길로 안내합니다.",
+
+  "few_clicks_global_item1_1": "해외 통관 서류 자동 생성",
+  "few_clicks_global_item1_2": "주문 정보를 바탕으로 수출입에 필요한 통관 서류를 자동으로 생성하고 신고를 지원합니다.",
+  "few_clicks_global_item2_1": "실시간 해외 배송 트래킹",
+  "few_clicks_global_item2_2": "고객에게 전달되는 내 상품의 이동 현황을 직접 조회하여, 마지막까지 안전하게 관리할 수 있습니다.",
+  "few_clicks_global_item3_1": "최적의 배송 방식 추천",
+  "few_clicks_global_item3_2": "도착 국가, 상품 종류, 무게에 따라 가장 빠르고 저렴한 글로벌 배송사를 자동으로 추천하고 연결합니다.",
+  "few_clicks_global_item4_1": "글로벌 파트너십",
+  "few_clicks_global_item4_2": "FedEx, UPS 등 신뢰할 수 있는 글로벌 물류 파트너사를 통해 전 세계 어디든 안정적인 배송을 보장합니다.",
+  " 🚀 여기까지 원배송 서브페이지 클릭 몇 번으로 비즈니스를 전 세계로 확장 텍스트": "=================================",
+
+  "business_type_shipping_text": "고객의 비즈니스 유형에 따라<br>다양한 배송방식 제공",
+  "business_type_shipping_content": "귀사의 현재 비즈니스 단계와 상황에 꼭 맞는 최적의 솔루션을 제안합니다.",
+
+  "business_type_shipping_item1_1": "바로출고",
+  "business_type_shipping_item1_2": "자체 창고 및 재고관리 시스템을 보유하고, 배송 파트만 전문적으로 아웃소싱하고 싶은 고객",
+  "business_type_shipping_item1_3": "✓ 기존 고객사의 인프라는 유지, 델레오의 글로벌 네트워크만 이용",
+  "business_type_shipping_item1_4": "✓ 풀필먼트 계약 부담 없는 합리적인 해외배송 요금",
+  "business_type_shipping_item1_5": "바로출고 바로가기",
+  "business_type_shipping_item2_1": "풀필먼트",
+  "business_type_shipping_item2_2": "1인 사업자, 소규모 쇼핑몰 등 물류 과정을 모두 맡기고 판매에만 집중하고 싶은 고객",
+  "business_type_shipping_item2_3": "✓ 입고, 검수, 보관, 재고관리, 포장, 출고까지 물류 전과정 대행",
+  "business_type_shipping_item2_4": "✓ 오배송 및 재고 불일치 문제를 해결하는 체계적인 관리 시스템",
+  "business_type_shipping_item2_5": "풀필먼트 바로가기",
+  " 🚀 여기까지 원배송 서브페이지 고객 비즈니스 유형에 따라 배송방식 제공 텍스트": "=================================",
+
+  "free_setup_text": "솔루션/물류센터 초기<br>세팅 비용 무료",
+  "free_setup_content": "초기 투자비용 없이도 해외시장에 도전할 수 있는 기회, 델레오가 쉽고 빠른 확장을 지원합니다.<br>글로벌 마켓 연동부터 상품 특성 맞춤형 보관/관리 시스템을 갖춘 물류센터까지, 비용 부담 없이 확장하세요.",
+  " 🚀 여기까지 원배송 서브페이지 초기 세팅 비용 무료 텍스트": "=================================",
+
+  "one_recommendation_text": "이런 분들에게 추천합니다!",
+
+  "one_recommendation_item1": "글로벌 쇼핑몰을<br>운영하시는 1인 셀러",
+  "one_recommendation_item2": "Qoo10, Amazon, Shopify 등에서<br>자체몰을 운영하는 중/소규모 브랜드",
+  "one_recommendation_item3": "국내에 거점을 두고 해외 소비자에게<br>물품을 보내고 싶은 판매자",
+  " 🚀 여기까지 원배송 서브페이지 이런 분들에게 추천 텍스트": "=================================",
+
+  "one_partners_content": "원배송은 다양한<br>글로벌 파트너사와 함께합니다.",
+  " 🚀 여기까지 원배송 서브페이지 글로벌 파트너사 텍스트": "=================================",
+
+  "one_bottom_link1": "원배송 바로가기",
+  "one_bottom_link2": "서비스 소개서 다운받기",
+  " 🚀 여기까지 원배송 서브페이지 바텀 배너 텍스트": "================================="
+
+}

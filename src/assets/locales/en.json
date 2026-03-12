@@ -1,0 +1,367 @@
+{
+  "================================= 헤더 header.html": "=================================",
+  "about-us": "About Us",
+  "service": "Service",
+  "kakaopay_delivery": "KakaoPay Shipping",
+  "shipbaesong": "Shipbaesong",
+  "onebaesong": "One-Express",
+  "boxobliss": "Box o’ Bliss",
+  "deleo_nex": "Deleo Nex",
+  " 🚀 여기까지 네비바 메뉴명": "=================================",
+
+
+  "================================= 푸터 footer.html": "=================================",
+  "footer_company_name": "Company Name: Deleo Korea",
+  "footer_ceo": "CEO: Yang Jungwon",
+  "footer_address": "Address: 1201, 12F, City Airport Tower, 36, Teheran-ro 87-gil, Gangnam-gu, Seoul, Republic of Korea, 06164",
+  "footer_business_registration_number": "Business Registration No.: 673-86-00253",
+  "footer_check_business_registration": "[Check Business Registration]",
+
+
+  "================================= 메인 index.html": "=================================",
+  "index_main_title": "Deleo expands <br>worldwide",
+  "index_video_title": "Use Deleo’s platform <br>technology to make global <br>logistics easier than ever",
+  " 🚀 여기까지 인덱스 히어로 비디오 텍스트": "=================================",
+
+  "index_about_deleo_content": "Connecting your business to the world — safely and swiftly<br>With smart logistics technology and a global network, Deleo provide seamless and efficient logistics solutions worldwide",
+  "index_about_deleo_link": "About Us",
+  " 🚀 여기까지가 인덱스 어바웃 델레오": "=================================",
+
+  "index_our_service_content": "One click to complete global logistics — Deleo",
+
+  "index_our_service_kp_title": "KakaoPay Shipping (Domestic/Global)",
+  "index_our_service_kp_text": "Book, Pay and Ship -  all made easy with Kakao Pay, domestic and international",
+
+  "index_our_service_ship_title": "Shipbaesong",
+  "index_our_service_ship_text": "no extra charges, no item details required — enjoy simple and effortless international shipping",
+
+  "index_our_service_one_title": "One-Express",
+  "index_our_service_one_text": "A seamless fulfillment solution for e-commerce businesses — simplifying global sales and inventory management",
+
+  "index_our_service_bob_title": "Box o’ Bliss",
+  "index_our_service_bob_text": "From order to delivery<br>The fastest and safest way to deliver K-items worldwide",
+
+  "index_our_service_nex_title": "Deleo Nex",
+  "index_our_service_nex_text": "Next-generation integrated logistics SaaS for global e-commerce",
+
+  "index_our_service_link": "Our Services",
+  " 🚀 여기까지 인덱스 아워 서비스": "=================================",
+
+  "index_philosophy_content": "Innovation in logistics, powered by technology and trust — that’s the philosophy of Deleo",
+
+  "index_philosophy_item_h2_main_smart": "Smart Simplicity",
+  "index_philosophy_item_h2_sub_smart": "스마트한 물류",
+  "index_philosophy_item_p_smart": "Manage global shipping with just a few clicks",
+
+  "index_philosophy_item_h2_main_eco": "Eco-Delivery",
+  "index_philosophy_item_h2_sub_eco": "친환경 물류",
+  "index_philosophy_item_p_eco": "Deliver sustainability through logistics",
+
+  "index_philosophy_item_h2_main_transparent": "Transparent Flow",
+  "index_philosophy_item_h2_sub_transparent": "투명한 물류 프로세스",
+  "index_philosophy_item_p_transparent": "Share the entire logistics process in real time",
+
+  "index_philosophy_item_h2_main_collaborative": "Collaborative Growth",
+  "index_philosophy_item_h2_sub_collaborative": "함께 성장하는 물류",
+  "index_philosophy_item_p_collaborative": "Grow together with our partners, creating new value for the future",
+
+  "index_philosophy_item_h2_main_global": "Global Trust",
+  "index_philosophy_item_h2_sub_global": "국경없는 물류",
+  "index_philosophy_item_p_global": "Provide accurate and predictable logistics experiences across borders",
+
+  "index_philosophy_item_h2_main_data": "Data-Integrated",
+  "index_philosophy_item_h2_sub_data": "데이터 기반 물류",
+  "index_philosophy_item_p_data": "Through integrated data, we build a more efficient logistics flow",
+  " 🚀 여기까지 인덱스 델레오 필로소피": "=================================",
+
+  "index_our_partners_content": "Leading global carriers around the world partner with Deleo",
+  " 🚀 여기까지 아워 파트너스": "=================================",
+
+
+  "================================= 회사소개 about-us.html": "=================================",
+  "about_us_hero_title": "Connecting Hearts Through Technology — Pioneering a New Era of Global Logistics",
+  "about_us_hero_sub_title": "Deleo is a smart logistics platform that connects the world as one",
+  " 🚀 여기까지 회사소개 히어로 비디오 텍스트": "=================================",
+
+  "about_us_vision_desc_text": "Deleo collaborates with global logistics partners to create an integrated ecosystem\nthat delivers efficient and seamless logistics services worldwide",
+  " 🚀 여기까지 회사소개 비전": "=================================",
+
+  "about_us_mission_sub_text_discover_title": "Discover",
+  "about_us_mission_sub_text_discover_sub_title": "Discovering logistics partners across the globe",
+  "about_us_mission_sub_text_discover_content": "From first-mile to last-mile, Deleo connects top partners across the entire global logistics value chain — including fulfillment, customs, settlement, and international delivery. Together, these partnerships form an integrated platform-driven ecosystem built on expertise and collaboration.",
+
+  "about_us_mission_sub_text_connect_title": "Connect",
+  "about_us_mission_sub_text_connect_sub_title": "Connecting the World Through Our Platform",
+  "about_us_mission_sub_text_connect_content": "Deleo bridges e-commerce businesses and customers, people and people, brands and influencers, and enterprises and global markets — all on one open logistics platform. Our open logistics system transcends distance and borders, connecting every opportunity across the globe.",
+
+  "about_us_mission_sub_text_maximize_title": "Maximize",
+  "about_us_mission_sub_text_maximize_sub_title": "Maximizing Customer Value",
+  "about_us_mission_sub_text_maximize_content": "Through real-time integrations with global couriers, postal networks, KakaoPay, and Lotte Global Logistics, Deleo offers customers a broader range of options and greater flexibility. Our adaptive solutions help businesses focus on growth while we handle logistics complexity.",
+
+  "about_us_mission_sub_text_share_title": "Share",
+  "about_us_mission_sub_text_share_sub_title": "A Shared-Economy Platform for Sustainable Growth",
+  "about_us_mission_sub_text_share_content": "Deleo strives to build a collaborative and sustainable logistics ecosystem, sharing infrastructure and opportunities rather than competing. Beyond borders, we are expanding into limitless global markets through partnership and innovation.",
+  " 🚀 여기까지 회사소개 미션": "=================================",
+
+  "about_us_why_content": "Deleo’s strength lies in solving the complexities of global logistics through technology and a user-centric philosophy.",
+
+  "about_us_why_card1_front_h3": "Technology & Platform",
+  "about_us_why_card1_front_p": "Technology-Driven Efficiency",
+  "about_us_why_card1_back_p": "With NDP (Deleo’s All-in-One Platform), we automate every step from order aggregation to delivery, customs, inventory, and settlement.<br>All processes are transparent and traceable in real time, providing complete visibility.",
+
+  "about_us_why_card2_front_h3": "Customer-Centric",
+  "about_us_why_card2_front_p": "Customer-Centric Customization",
+  "about_us_why_card2_back_p": "We build every service around a true customer-centric perspective. We deliver tailored logistics solutions optimized for every client’s business model.",
+
+  "about_us_why_card3_front_h3": "Trust & Reliability",
+  "about_us_why_card3_front_p": "Predictive & Preventive Logistics Management",
+  "about_us_why_card3_back_p": "We proactively monitor logistics flows to prevent disruptions. Our predictive system ensures seamless operations and uninterrupted business flow.",
+
+  "about_us_why_bottom_text": "Driven by convenience, integrity, and global connectivity, Deleo is building the world’s most reliable and intelligent logistics ecosystem—empowering our clients to focus on growth.",
+  " 🚀 여기까지 회사소개 왜 델레오": "=================================",
+
+  "about_us_identity_content": "The Deleo logo embodies professionalism and reliability as a global logistics leader",
+
+  "about_us_identity_text1": "More than a symbol, it reflects our vision to simplify complex logistics through technology",
+  "about_us_identity_text2": "The vibrant cyan color represents youth and innovation, while the refined wordmark conveys trust and technological excellence",
+  "about_us_identity_text3": "The logo type may only be used in the colors specified below. We recommend using the primary turquoise logo and do not recommend using a gray background. When applying the logo, ensure sufficient visibility depending on the background color and brightness.",
+  " 🚀 여기까지 회사소개 브랜드 아이덴티티": "=================================",
+
+
+  "================================= 카카오페이 kakaopay.html": "=================================",
+  "kakaopay_hero_sub": "KakaoPay Delivery",
+  "kakaopay_hero_title": "From Korea to the World -<br>with Just Kakao Pay!",
+  " 🚀 여기까지 카카오페이 서브페이지 상단 텍스트": "=================================",
+
+  "kakaopay_at_a_glance_text": "How to use KakaoPay Delivery",
+  "kakaopay_at_a_glance_content": "Send packages domestically or internationally, all within Kakao Pay",
+  "kakaopay_at_a_glance_item_content1": "Request shipping via Kakao Pay",
+  "kakaopay_at_a_glance_item_content2": "Choose your shipping method",
+  "kakaopay_at_a_glance_item_content3": "Enter shipment details",
+  "kakaopay_at_a_glance_item_content4": "Done! Your shipment is on its way",
+  " 🚀 여기까지 카카오페이 서브페이지 한눈에 보는 카카오페이 배송신청 텍스트": "=================================",
+
+  "kakaopay_is_international_text": "International Shipping",
+  "kakaopay_is_international_content": " No paperwork, no hassle — send your packages abroad right from home",
+
+  "kakaopay_is_international_item1": "simple shippin with Kakao Pay — from request to delivery",
+  "kakaopay_is_international_merit1_1": "Simply enter the recipient’s address and finish your request in under a minute",
+  "kakaopay_is_international_merit1_2": "Submit your request, leave it at your door, and we’ll pick it up. No heavy lifting required",
+  "kakaopay_is_international_merit1_3": "No need to fill out a long or complicated item list. We prepare everything automatically for you",
+
+  "kakaopay_is_international_item2": "Safe and reliable at every step, From start to finish",
+  "kakaopay_is_international_merit2_1": "You can view the entire packing and shipping-prep process for your item through video",
+  "kakaopay_is_international_merit2_2": "From Korea to your final destination, get real-time updates in KakaoTalk",
+  "kakaopay_is_international_merit2_3": "With professional inspection and secure repackaging to keep your items safe during delivery",
+
+  "kakaopay_is_international_item3": "Less cost, Better quality",
+  "kakaopay_is_international_merit3_1": "Working with multiple partners to provide efficient routes and affordable shipping rates for each country",
+  "kakaopay_is_international_merit3_2": "Enjoy premium-quality service at a reasonable price",
+  "kakaopay_is_international_merit3_3": "Repacked at no extra cost with durable boxes suitable for international shipping",
+
+  "kakaopay_is_international_item4": "Expert Support Every Step of the Way",
+  "kakaopay_is_international_merit4_1": "Complicated HS code input and customs documentation are fully handled by our logistics experts",
+  "kakaopay_is_international_merit4_2": "Prohibited or restricted items are carefully screened in advance to prevent shipping failures",
+  "kakaopay_is_international_merit4_3": "Our customs specialists review your shipment ahead of time to avoid unexpected clearance issues",
+  " 🚀 여기까지 카카오페이 서브페이지 해외배송 텍스트": "=================================",
+
+  "kakaopay_is_domestic_text": "Domestic Shipping",
+  "kakaopay_is_domestic_content": "At home or away, send packages easily with just Kakao Pay",
+
+  "kakaopay_is_domestic_item1": "From home with doorstep pickup, or from your nearest convenience store",
+  "kakaopay_is_domestic_merit1_1": " If you’re busy, schedule a home pickup on the date that suits you best",
+  "kakaopay_is_domestic_merit1_2": " Simply drop it off anytime at a nearby 24-hour convenience store",
+  "kakaopay_is_domestic_item2": "No App Needed — All in Kakao Pay",
+  "kakaopay_is_domestic_merit2_1": "No downloads, no tedious sign-ups required Book, pay, and confirm your shipment with just a few taps in Kakao Pay",
+  "kakaopay_is_domestic_item3": "Send Without Knowing the Recipient’s Address",
+  "kakaopay_is_domestic_merit3_1": "Request the delivery address via KakaoTalk — the recipient fills it in directly",
+  "kakaopay_is_domestic_merit3_2": "Always Ship safely to the exact address with no worries about incorrect information",
+  " 🚀 여기까지 카카오페이 서브페이지 국내배송 텍스트": "=================================",
+
+  "kakaopay_bottom_link": "Ready for simple global delivery? <br>Start with Kakao Pay!",
+  " 🚀 여기까지 카카오페이 서브페이지 바텀 배너 텍스트": "=================================",
+
+
+  "================================= 쉽배송 shipbaesong.html": "=================================",
+  "ship_hero_sub": "Shipbaesong",
+  "ship_hero_title": "A Smarter, Simpler Way to Ship Overseas",
+  "ship_hero_under": "Send your love and essentials safely — to family and friends around the world.",
+  " 🚀 여기까지 쉽배송 서브페이지 상단 텍스트": "=================================",
+
+  "ship_bg_in_banner_text": "Now, Just prepare the items.<br>From pickup and packing to customs and final delivery, EasyShip handles every step of international shipping for you.",
+  " 🚀 여기까지 쉽배송 서브페이지 배경 있는 배너 텍스트": "=================================",
+
+  "ship_target_audience_text": "Recommended For",
+  "ship_target_audience_item1": "Students abroad who want heavy books or daily essentials delivered with ease",
+  "ship_target_audience_item2": "Anyone sending Korean foods or cosmetics to family and friends overseas",
+  "ship_target_audience_item3": "Shippers who regularly send small personal items abroad",
+  " 🚀 여기까지 쉽배송 서브페이지 이런 분들에게 추천합니다 텍스트": "=================================",
+
+  "ship_exclusive_service_text": "What Makes Shipbaesong Different",
+  "ship_exclusive_service_item1_1": "Just Enter the Number of Boxes",
+  "ship_exclusive_service_item1_2": "Simply enter how many boxes you’re sending — no need to fill out complex forms. Our logistics experts take care of item lists and HS code classification for you.",
+  "ship_exclusive_service_item2_1": "Smart Carrier Matching",
+  "ship_exclusive_service_item2_2": "Deleo’s global partner network automatically finds the best rate and route for your shipment. Enjoy a reliable, cost-efficient delivery service every time.",
+  "ship_exclusive_service_item3_1": "All-Inclusive Pricing — No Hidden Fees",
+  "ship_exclusive_service_item3_2": "There are no extra charges like remote-area fees or fuel surcharges.",
+  "ship_exclusive_service_item4_1": "Free Door-to-Door Pickup",
+  "ship_exclusive_service_item4_2": "Choose your preferred pickup date — our courier will collect your boxes right from your door for free.",
+  " 🚀 여기까지 쉽배송 서브페이지 쉽배송만의 서비스 텍스트": "=================================",
+
+  "ship_end_to_end_text": "We Handle Everything — From Start to Finish",
+
+  "ship_end_to_end_item1_1": "Durable Packaging",
+  "ship_end_to_end_item1_2": "We carefully pack every item to ensure safe arrival",
+  "ship_end_to_end_item2_1": "Shipping Insurance",
+  "ship_end_to_end_item2_2": "Coverage for any unexpected delivery incidents",
+  "ship_end_to_end_item3_1": "Packing Recording Service",
+  "ship_end_to_end_item3_2": "Watch the full packing process from our logistics center via Recording",
+  " 🚀 여기까지 쉽배송 서브페이지 처음부터 끝까지 책임집니다 텍스트": "=================================",
+
+  "ship_customer_review_text": "What Our Customers Say",
+
+  "ship_customer_review_item1_1": "Review from a Customer in Canada",
+  "ship_customer_review_item1_2": "Shipbaesong is cheaper and more convenient than EMS!",
+  "ship_customer_review_item1_3": "\"Shipbaesong is cheaper and more convenient than EMS!\" When using the post office, I had to list every item myself, but Shipbaesong took care of all the details and even inspected each product carefully. Tracking was automatic, and the customer service was incredibly kind — it made the whole process so easy and comfortable.",
+  "ship_customer_review_item2_1": "Review from a Customer Who Sent a Parcel to a Friend in Australia",
+  "ship_customer_review_item2_2": "Guided me through every step on KakaoTalk",
+  "ship_customer_review_item2_3": "It was my first time sending an international package, but Shipbaesong guided me through every step on KakaoTalk. From packing to customs, they kept me updated the entire way, and the parcel arrived safely in Australia. My friend there was amazed at how fast Korean shipping is.",
+  "ship_customer_review_item3_1": "Review from a Working Professional Living in London",
+  "ship_customer_review_item3_2": "The best part was not having to carry anything",
+  "ship_customer_review_item3_3": "The best part was not having to carry anything—Shipbaesong picked up the box from my home in Korea and delivered it straight to my place in the UK. I sent it on August 19 and it arrived by September 1, which is incredibly fast. I’ll definitely keep using Shipbaesong.",
+  " 🚀 여기까지 쉽배송 서브페이지 실제 고객님들의 후기 텍스트": "=================================",
+
+  "ship_partners_content": "We work with trusted logistics partners around the world to provide faster, safer delivery experiences",
+  " 🚀 여기까지 쉽배송 서브페이지 글로벌 파트너사 텍스트": "=================================",
+
+  "ship_bottom_link": "Go to Shipping",
+  " 🚀 여기까지 쉽배송 서브페이지 바텀 배너 텍스트": "=================================",
+
+
+  "================================= 원배송 onebaesong.html": "=================================",
+  "one_hero_sub": "One-Express",
+  "one_hero_title": "From Order to Inventory Management, Through Overseas Customs Clearance and Final Delivery — One Platform, One Solution: ONE-Express",
+  " 🚀 여기까지 원배송 서브페이지 상단 텍스트": "=================================",
+
+  "one_waste_time_text": "Are You Struggling with These Common E-Commerce Challenges?",
+
+  "one_waste_time_item1": "Are you tired of collecting orders manually from multiple online stores?",
+  "one_waste_time_item2": "Are customs paperwork and export/import documentation overwhelming?",
+  "one_waste_time_item3": "Do inaccurate inventory levels delay your order processing?",
+  "one_waste_time_item4": "Want to expand globally even with a small product lineup?",
+  " 🚀 여기까지 원배송 서브페이지 시간 낭비 텍스트": "=================================",
+
+  "one_bg_in_banner_text1": "One-Express is here to help.",
+  "one_bg_in_banner_text2": "One-Express is a cross-border e-commerce logistics platform that simplifies every step of your global business operations.",
+  " 🚀 여기까지 원배송 서브페이지 배경 있는 배너 텍스트": "=================================",
+
+  "one_click_order_management_text": "Manage All Orders Across Multiple Sales Channels in One Click",
+  "one_click_order_management_content": "One-Express helps you save valuable time by automating repetitive logistics tasks.",
+
+  "one_click_order_management_item1_1": "Automatically sync orders from",
+  "one_click_order_management_item1_2": "Cafe24, Shopify, Amazon<small class=\"fs-m-12 fs-p-12\">(coming soon)</small>, and TikTok Shop<small class=\"fs-m-12 fs-p-12\">(coming soon)</small>.",
+  "one_click_order_management_item2_1": "Bulk order processing",
+  "one_click_order_management_item2_2": "manage invoices and shipping requests with a single click.",
+  "one_click_order_management_item3_1": "End-to-end workflow automation",
+  "one_click_order_management_item3_2": "from inventory allocation to shipment.",
+  " 🚀 여기까지 원배송 서브페이지 모든 판매 채널의 주문, 클릭 한번으로 통합 관리 텍스트": "=================================",
+
+  "few_clicks_global_text": "Expand Your Business Globally — With Just a Few Clicks",
+  "few_clicks_global_content": "Cross-border logistics are complex — One-Express makes it effortless.",
+
+  "few_clicks_global_item1_1": "Automatic customs documentation",
+  "few_clicks_global_item1_2": "export/import papers generated and filed automatically.",
+  "few_clicks_global_item2_1": "Real-time international tracking",
+  "few_clicks_global_item2_2": "for full end-to-end visibility.",
+  "few_clicks_global_item3_1": "Smart carrier matching",
+  "few_clicks_global_item3_2": "choose the fastest and most cost-efficient delivery option.",
+  "few_clicks_global_item4_1": "Trusted partnerships",
+  "few_clicks_global_item4_2": "with global logistics leaders such as FedEx and UPS.",
+  " 🚀 여기까지 원배송 서브페이지 클릭 몇 번으로 비즈니스를 전 세계로 확장 텍스트": "=================================",
+
+  "business_type_shipping_text": "Flexible Shipping Solutions for Businesses of All Kind",
+  "business_type_shipping_content": "Deleo offers tailored logistics services, not one-size-fits-all solutions.",
+
+  "business_type_shipping_item1_1": "Direct Shipping",
+  "business_type_shipping_item1_2": "Businesses with in-house warehouse and inventory systems seeking a specialized partner to outsource only their delivery operations.",
+  "business_type_shipping_item1_3": "✓ Maintain your existing infrastructure while leveraging Deleo’s global logistics network.",
+  "business_type_shipping_item1_4": "✓ Cost-effective global shipping, no fulfillment contract required.",
+  "business_type_shipping_item2_1": "Fulfillment Service",
+  "business_type_shipping_item2_2": "For solo entrepreneurs and small-scale e-commerce brands that want to hand off logistics end-to-end and concentrate on growing their business.",
+  "business_type_shipping_item2_3": "✓ End-to-end logistics management from inbound inspection and storage to inventory control, packaging, and dispatch.",
+  "business_type_shipping_item2_4": "✓ A robust management system that resolves misdelivery issues and ensures accurate inventory tracking.",
+  " 🚀 여기까지 원배송 서브페이지 고객 비즈니스 유형에 따라 배송방식 제공 텍스트": "=================================",
+
+  "free_setup_text": "No Setup Fees — Start Global Shipping with Zero Risk",
+  "free_setup_content": "Get started in the global market with no upfront cost.<br>Deleo supports your smooth and scalable international growth.<br>From marketplace integration to optimized warehousing, expand globally — with no setup fees.",
+  " 🚀 여기까지 원배송 서브페이지 초기 세팅 비용 무료 텍스트": "=================================",
+
+  "one_recommendation_text": "Recommended For",
+
+  "one_recommendation_item1": "Solo sellers running global online stores",
+  "one_recommendation_item2": "Small and mid-size brands operating on Qoo10, Amazon, or Shopify",
+  "one_recommendation_item3": "Sellers based in Korea who want to reach global customers",
+  " 🚀 여기까지 원배송 서브페이지 이런 분들에게 추천 텍스트": "=================================",
+
+  "one_partners_content": "We work with trusted logistics partners around the world to provide faster, safer delivery experiences",
+  " 🚀 여기까지 원배송 서브페이지 글로벌 파트너사 텍스트": "=================================",
+
+  "one_bottom_link1": "Go to Shipping",
+  "one_bottom_link2": "Get Service Guide",
+  " 🚀 여기까지 원배송 서브페이지 바텀 배너 텍스트": "=================================",
+
+
+  "================================= 박스오블리스 bob.html": "=================================",
+  "bob_hero_sub": "Box o’ Bliss",
+  "bob_hero_title": "K-Lifestyle Global Commerce Platform",
+  "bob_hero_under": "Box o’ Bliss is a global commerce platform based on professional curation by local Korean MDs, delivering trusted K-brands and products swiftly and reliably to consumers worldwide.",
+  " 🚀 여기까지 bob 서브페이지 상단 텍스트": "=================================",
+
+  "bob_bg_in_banner_text1": "Beyond product distribution, we accelerate the global expansion of Korean brands while creating new sales opportunities within the domestic market.",
+  " 🚀 여기까지 bob 서브페이지 배경 있는 배너 텍스트": "=================================",
+
+  "bob_core_competency_text": "Core Strengths",
+  "core-competency_item1_1": "Expert Curation",
+  "core-competency_item1_2": "We curate products that reflect Korean market trends and consumer insights, selecting items best suited for both global and domestic demand.",
+  "core-competency_item2_1": "Integrated Logistics & Fulfillment Network",
+  "core-competency_item2_2": "Through local fulfillment, direct delivery, and global logistics partnerships, we operate a stable and efficient distribution network.",
+  "core-competency_item3_1": "Data-Driven Marketing Support",
+  "core-competency_item3_2": "We empower partners through influencer collaborations, group-buying models, and other data-driven digital marketing strategies.",
+  "core-competency_item4_1": "Reliable Payment & Operational Infrastructure",
+  "core-competency_item4_2": "With secure international payment systems, customer support channels, and campaign management tools, we ensure a reliable B2B operating environment.",
+  " 🚀 여기까지 bob 서브페이지 핵심 경쟁력 텍스트": "=================================",
+
+  "bob_business_area_text": "Key Business Areas",
+
+  "bob_business_area_item_title1": "Global E-Commerce Distribution",
+  "bob_business_area_item_text1_1": "Operating global channels such as Box o’ Bliss and Amazon,",
+  "bob_business_area_item_text1_2": "we support brand expansion through both direct purchase and consignment models.",
+  "bob_business_area_item_title2": "B2B Distribution & Partnerships",
+  "bob_business_area_item_text2_1": "We supply wholesale products to international retailers and online sellers.",
+  "bob_business_area_item_text2_2": "We help Korean manufacturers establish export channels and long-term partnerships.",
+  "bob_business_area_item_title3": "Influencer Network (Domestic & Global)",
+  "bob_business_area_item_text3_1": "We operate influencer-led group-buying and direct-to-consumer sales models.",
+  "bob_business_area_item_text3_2": "In Korea, we connect consumers with local K-brands, while abroad, we expand their reach to global audiences.",
+  "bob_business_area_item_text3_3": "We also provide influencer-driven content creation and branded PPL advertising.",
+  " 🚀 여기까지 bob 서브페이지 주요 사업영역 텍스트": "=================================",
+
+  "collaboration_text": "Partnership Opportunities",
+  "collaboration_item1_1": "Channel Integration & Operation Support",
+  "collaboration_item1_2": "We provide instant sales pathways for brands seeking global expansion.",
+  "collaboration_item1_3": "From operations to logistics, we offer a complete end-to-end solution.",
+  "collaboration_item2_1": "Influencer Group-Buying & Advertising",
+  "collaboration_item2_2": "We drive direct sales through influencer group-buying campaigns in Korea.",
+  "collaboration_item2_3": "Through overseas influencer collaborations, we boost both brand awareness and revenue growth globally.",
+  " 🚀 여기까지 bob 서브페이지 협업 기회 텍스트": "=================================",
+
+  "bob_recommendation_text": "Recommended For",
+  "bob_recommendation_item1": "Companies needing logistics or operational partners for global sales",
+  "bob_recommendation_item2": "Brands seeking new growth opportunities through overseas expansion",
+  "bob_recommendation_item3": "Brands aiming to boost sales through influencer marketing and group-buying models",
+
+  "bob_bottom_link1": "Go to Box o’ Bliss",
+  "bob_bottom_link2": "Let’s Collaborate",
+  "bob_bottom_link2_1": "Please contact us at [contact@boxobliss.com] to discuss partnership opportunities.",
+  " 🚀 여기까지 bob 서브페이지 이런분들에게 추천합니다 텍스트": "================================="
+}
+

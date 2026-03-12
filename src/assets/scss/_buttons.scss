@@ -1,0 +1,103 @@
+@use "variables2" as *;
+
+.btn {
+  border: none;
+  background-color: transparent;
+}
+
+.btn-black {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background: $black;
+  color: $white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in;
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 32px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    scale: 1.05;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.btn-white {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+  color: $black ;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in;
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 32px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    scale: 1.05;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.btn-outline-black {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+  color: $black;
+  border: 1px solid $black;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in;
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 32px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    scale: 1.05;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+  color: $white ;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in;
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 32px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    scale: 1.05;
+    transition: all 0.2s ease-in;
+  }
+}

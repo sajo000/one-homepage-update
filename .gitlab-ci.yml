@@ -1,0 +1,38 @@
+variables:
+  KUBERNETES_POD_LABELS_1: fargate=false
+  KUBERNETES_CPU_REQUEST: '0.2'
+  KUBERNETES_CPU_LIMIT: '0.2'
+  KUBERNETES_MEMORY_REQUEST: 64M
+  KUBERNETES_MEMORY_LIMIT: 64M
+
+stages:
+- sync
+
+.syncTemplate: &syncTemplate
+  image:
+    name: registry.deleo.co.kr/infra-dev/build-base/alpine-kubectl:latest
+    entrypoint: ['']
+  script:
+  - kubectl config use-context platform-dev/gitlab-agent:platform-prd
+  - kubectl config set-context --current --namespace=platform-prod
+  - kubectl create job --from=cj/${ENV}-front-deleo-sync ${ENV}-front-deleo-sync-$(tr -dc a-z0-9 </dev/urandom | head -c 7)
+
+sync_front_dev:
+  stage: sync
+  variables:
+    ENV: dev
+  <<: *syncTemplate
+  rules:
+  - if: $CI_COMMIT_BRANCH == 'front'
+    changes:
+    - src/**/*
+
+sync_front_prd:
+  stage: sync
+  variables:
+    ENV: prd
+  <<: *syncTemplate
+  rules:
+  - if: $CI_COMMIT_BRANCH == 'master'
+    changes:
+    - src/**/*

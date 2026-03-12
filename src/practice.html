@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>연습</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <style>
+    li {
+      list-style: none;
+    }
+
+    section {
+      height: 30vh;
+      border: 2px dashed lightgrey;
+      margin: 10vh auto;
+    }
+
+    .main-hero-wrap {
+      border: 2px dashed red;
+      background-color: lightblue;
+    }
+
+    .animation_text,
+    .rotate_text {
+      font-size: 120px;
+      font-weight: bold;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+<header><h1>header</h1></header>
+
+<main>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <section class="section1">
+        <div class="main-hero-wrap" style="height: 30vh;"></div>
+
+        <ul style="display: flex; gap: 1rem;">
+          <li class="box1" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightblue;"></li>
+          <li class="box2" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightcoral;"></li>
+          <li class="box3" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightpink;"></li>
+          <li class="box4" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightseagreen;"></li>
+        </ul>
+      </section>
+
+      <section class="section2" style="display: flex; align-items: center; justify-content: center;">
+        <ul style="display: flex; gap: 1rem;">
+          <li class="box_alpha" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightsteelblue;"></li>
+          <li class="box_alpha" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightgoldenrodyellow;"></li>
+          <li class="box_alpha" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightsalmon;"></li>
+          <li class="box_alpha" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightslategray;"></li>
+        </ul>
+      </section>
+
+      <section class="section3" style="display: flex; align-items: center; justify-content: center;">
+        <ul style="display: flex; gap: 1rem;">
+          <li class="box_bravo" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightblue;"></li>
+          <li class="box_bravo" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightcoral;"></li>
+          <li class="box_bravo" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightpink;"></li>
+          <li class="box_bravo" style="width: 50px; height: 50px; border-radius: 10px; background-color: lightseagreen;"></li>
+        </ul>
+      </section>
+
+      <section class="section4" style="height: auto;">
+        <div class="animation_text">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+      </section>
+
+      <section class="section5">
+        <div class="rotate_text">ABCDEFGH</div>
+      </section>
+
+<!--      <div style="height: 200vh;"></div>-->
+    </div>
+  </div>
+</main>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    // 요소를 특정 상태로 바꾸는 애니메이션
+    // gsap.to(".main-hero-wrap", {
+    //   y: 50, // y축으로 80px 만큼 이동
+    //   opacity: 0.5, // 최종 투명도 (1에서 0.5로)
+    //   duration: 1, // 1초 동안 진행
+    // });
+
+    // 애니메이션 시작 상태 설정
+    // gsap.from(".main-hero-wrap", {
+    //   y: -200, // y축 -200px 에서 시작
+    //   opacity: 0, // 투명도 0에서 시작
+    //   duration: 1,
+    // });
+
+    // 애니메이션 시작과 끝 상태를 동시에 설정
+    gsap.fromTo(".main-hero-wrap",
+        {x: -100, opacity: 0}, // 시작 상태
+        {x: 100, opacity: 1, duration: 2} // 끝 상태
+    );
+
+    // 여러 애니메이션 순서대로 연결하기: timeline.
+    const tl = gsap.timeline();
+
+    tl.to(".main-hero-wrap", {x: 300, y: 200, duration: 1}) // 오른쪽 아래로 이동
+      .to(".main-hero-wrap", {rotation: 360, duration: 1}) // 360도 회전
+      .to(".main-hero-wrap", {x: 0, y: 0, duration: 1} // 왼쪽 위로 이동
+    );
+
+    // 타임라인 테스트. 아래에서 위로 올라옴
+    const tl2 = gsap.timeline();
+
+    tl2.from(".box1", {duration: 1, opacity: 0, y: 100})
+      .from(".box2", {duration: 1, opacity: 0, y: 100})
+      .from(".box3", {duration: 1, opacity: 0, y: 100})
+      .from(".box4", {duration: 1, opacity: 0, y: 100}
+    );
+
+    // 요소 사이의 재생 간격 컨트롤
+    // 1. relative 방식:
+    // const tl3 = gsap.timeline();
+    //
+    // tl3.from(".box1", {duration: 1, opacity: 0, y: 100})
+    //   .from(".box2", {duration: 1, opacity: 0, y: 100}, "+=1") // 앞 요소보다 1초 느리게 재생
+    //   .from(".box3", {duration: 1, opacity: 0, y: 100}, "-=0.5") // 앞 요소보다 0.5초 빠르게 재생 (이 코드에선 앞에서 느리게 0.5초만 빠르게 재생됨.)
+    //   .from(".box4", {duration: 1, opacity: 0, y: 100}, "<" // 앞 요소와 동시에 시작
+    // );
+
+    // 2. absolute 방식:
+    // const tl4 = gsap.timeline();
+    //
+    // tl4.from(".box1", {duration: 1, opacity: 0, y: 100})
+    // .from(".box2", {duration: 1, opacity: 0, y: 100}, 0.5) // 앞 요소와 상관없이 전체 타임라인에서 1초에 재생. strong 이 아닌 number 형태로 작성.
+    // .from(".box3", {duration: 1, opacity: 0, y: 100},)
+    // .from(".box4", {duration: 1, opacity: 0, y: 100}, 1 // 앞 요소와 상관없이 전체 타임라인에서 1초에 재생. strong 이 아닌 number 형태로 작성.
+    // );
+  });
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    // scrollTrigger
+    gsap.to(".box_alpha", {
+      rotation: 360,
+      duration: 10,
+      repeat: -1,
+      scrollTrigger: {
+        trigger: '.section2', // 스크롤 감지 이벤트 기준 요소 지정
+        start: 'top 20%', // 애니메이션이 시작되는 스크롤 위치 정의
+        end: 'bottom 40%', // 애니메이션이 종료되는 스크롤 위치 정의
+        // markers: true, // 스크롤 마커
+        // toggleActions: "restart pause reverse none", // 1. 처음부터 재생, 2. 그 자리에서 일시정지, 3. 멈춘 상태에서 반대 방향으로 재생, 4. 아무런 동작 하지 않음.
+        // 🚀 toggleActions 설명
+        // 1. onEnter: 아래로 스크롤 하여 start 지점을 처음 지나갈 때
+        // 2. onLeave: 아래로 스크롤 하여 end 지점을 처음 지나갈 때
+        // 3. onEnterBack: 위로 스크롤하여 end 지점을 되돌아올 때
+        // 4. onLeaveBack: 위로 스크롤하여 start 지점을 되돌아올 때
+      }
+    });
+
+    // scrub: 문지를 때! 스크롤 움직일때 애니메이션이 동작
+    gsap.to(".box_bravo", {
+      rotation: 360,
+      duration: 1, // 무시됨ㅎ
+      // repeat: -1, // 무한반복 해제
+      scrollTrigger: {
+        trigger: '.section3', // 스크롤 감지 이벤트 기준 요소 지정
+        start: 'top 20%', // 애니메이션이 시작되는 스크롤 위치 정의
+        end: 'bottom 40%', // 애니메이션이 종료되는 스크롤 위치 정의
+        // markers: true, // 스크롤 마커
+        scrub: true, // 애니메이션이 스크롤이 직접 연결되어 동작. 이 경우에 toggleActions, duration 무시됨
+      }
+    });
+
+    // scrub 텍스트
+    gsap.to(".animation_text", {
+      x(){
+        return -(this.targets()[0].offsetWidth - innerWidth) // 요소의 총 너비에서 현재 뷰포트 너비를 뺀 값만큼 요소를 음수 방향(왼쪽)으로 이동
+      },
+      scrollTrigger: {
+        trigger: '.section4', // 스크롤 감지 이벤트 기준 요소 지정
+        start: '20% center', // 트리거의 상단에서 20% 떨어진 지점이 뷰포트의 정중앙에 닿으면 애니메이션 시작
+        end: '80% center', // 트리거의 상단에서 80% 떨어진 지점이 뷰포트의 정중앙에 닿으면 애니메이션 종료
+        // markers: true, // 마커에서 start, end 보면 이해 쉬움
+        scrub: 1,
+      }
+    });
+
+    // pin: 핀을 꽂은 것 처럼 고정!
+    ScrollTrigger.create({
+      trigger: '.section5',
+      start: '20% center',
+      end: '+=3000', // 2000만큼 스크롤 늘림
+      pin: true,
+      pinType: 'fixed',
+      pinSpacing: true, // 여백 보일지 여부
+      animation: gsap.to('.rotate_text', {
+        rotation: 360,
+      }),
+      scrub: 1,
+      // markers: true,
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+@use "../variables2" as *;
+
+/* ========================================================================
+ * 상단 히어로 이미지 내 텍스트
+ * 주문부터 재고관리, 해외 통관, 배송까지. 올인원 플랫폼 원배송
+*/
+.sub-page__hero-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  > .btn {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: center;
+
+    > .btn {
+      width: 280px;
+    }
+  }
+}
+
+/* ========================================================================
+ * 시간 낭비
+*/
+.waste-time__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.waste-time__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #4E556C;
+  background: rgba(78, 85, 108, 0.50);
+
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 25%;
+  }
+}
+
+// 이미지
+.waste-time__item-img {
+  width: 100px;
+  height: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ========================================================================
+ * 원배송이 도와드립니다
+*/
+.one-bg-in-banner__wrapper {
+  padding: 100px 0;
+}
+
+.one-bg-in-banner__wrapper {
+  background-image: url("../images/index/one-bg-in-banner-img.webp");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* ========================================================================
+ * solution 01, 02... 솔루션 뱃지 스타일
+*/
+.one-solution-badge {
+  display: inline-block;
+  font-size: 16px;
+  color: $white;
+  font-weight: 600;
+  padding: 4px 16px;
+  border-radius: 100px;
+  background: $primary;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+/* ========================================================================
+ * 모든 판매 채널의 주문, 클릭 한번으로 통합 관리
+*/
+.one-click-order-management__middle-img {
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    height: 480px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.one-click-order-management__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.one-click-order-management__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: $bg-blue-gray;
+  border-radius: 12px;
+  padding: 24px;
+
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 33.3333%;
+    padding: 32px;
+  }
+}
+
+/* ========================================================================
+ * 클릭 몇 번으로 비즈니스를 전 세계로 확장
+*/
+.few-clicks-global__middle-img {
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    height: 480px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.few-clicks-global__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.few-clicks-global__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: $white;
+  border-radius: 12px;
+  padding: 24px;
+
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 calc(50% - 8px);
+    padding: 32px;
+  }
+}
+
+.few-clicks-global__item-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ========================================================================
+ * 고객의 비즈니스 유형에 따라 다양한 배송방식 제공
+*/
+.business-type-shipping__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.business-type-shipping__item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 32px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+  }
+
+  &.baroshipping { // 바로출고 배경 이미지
+    height: 441px;
+    background-image: url("../images/index/baroshipping.webp");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &.fulfillment { // 풀필먼트 배경 이미지
+    height: 441px;
+    background-image: url("../images/index/fulfillment.webp");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.business-type-shipping__item-btn-wrapper {
+  margin-top: 100px;
+  text-align: right;
+}
+
+/* ========================================================================
+ * 초기 세팅 비용 무료
+*/
+.free-setup__wrapper {
+  background: url("../images/index/free-setup-img.webp") no-repeat center center;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* ========================================================================
+ * 이런 분들에게 추천
+*/
+.one-recommendation__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.one-recommendation__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 33.333%;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 12px;
+  background: $white;
+  box-shadow: 0 4px 20px 0 rgba(119, 119, 119, 0.10);
+}
+
+// 이미지
+.one-recommendation__item-img {
+  width: 180px;
+  height: 180px;
+  padding: 30px;
+  margin: 0 auto;
+  background: $bg-blue;
+  border-radius: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ========================================================================
+ * 아워 파트너스
+*/
+.section-marquee {
+  width: 100%;
+  //max-width: 1200px;
+  //margin: 0 auto;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 32px; // 두 티커 라인 사이에 간격 추가
+  will-change: transform; // 애니메이션 성능 최적화
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ticker__run {
+  display: flex;
+  align-items: center;
+}
+
+// * ticker__img: JS에 의해 복제되어 생성되는 롤링 콘텐츠의 단위
+// * 이 요소가 무한 루프의 '한 바퀴' 너비를 결정함
+.ticker__img {
+  display: flex;
+  align-items: center;
+  gap: 32px; // 로고 간격
+  padding: 0 16px; // 양쪽 끝에 여백 추가
+  flex-shrink: 0;
+
+  @include media-breakpoint-up(lg) {
+    .ticker__img {
+      gap: 48px;  // 로고 간격
+      padding: 0 24px; // 양쪽 끝에 여백 추가
+    }
+  }
+
+  // 개별 이미지 컨테이너 (div) 스타일
+  > div {
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.3s ease;
+
+    @include media-breakpoint-up(lg) {
+      height: 80px;
+    }
+  }
+}
+
+.ticker__img > div img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ========================================================================
+ * 원배송 바텀 배너 이미지
+*/
+.one__bottom-banner {
+  background-image: url("../images/index/one-bottom-banner-img.webp");
+}

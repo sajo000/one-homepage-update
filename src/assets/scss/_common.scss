@@ -1,0 +1,327 @@
+@use "variables2" as *;
+
+/* ************************************************************************
+ * 주석 설명
+ * @see: 참고 사항
+* ************************************************************************/
+
+/* ========================================================================
+ * 폰트 선언
+*/
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Pretendard Bold'), url(../fonts/woff2-subset/Pretendard-Bold.subset.woff2) format('woff2'), url(../fonts/woff-subset/Pretendard-Bold.subset.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: swap;
+  src: local('Pretendard SemiBold'), url(../fonts/woff2-subset/Pretendard-SemiBold.subset.woff2) format('woff2'), url(../fonts/woff-subset/Pretendard-SemiBold.subset.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-display: swap;
+  src: local('Pretendard Medium'), url(../fonts/woff2-subset/Pretendard-Medium.subset.woff2) format('woff2'), url(../fonts/woff-subset/Pretendard-Medium.subset.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pretendard Regular'), url(../fonts/woff2-subset/Pretendard-Regular.subset.woff2) format('woff2'), url(../fonts/woff-subset/Pretendard-Regular.subset.woff) format('woff');
+}
+
+/* ========================================================================
+ * root 재정의
+*/
+:root {
+  --bs-primary-rgb: 0, 186, 209;
+  --line-height: 1.5;
+  --letter-spacing: -0.015rem;
+}
+
+/* ========================================================================
+ * reset / 공통 스타일
+ * @see: 모바일, 웹 분기점 -> 768px. 사용법 -> @include media-breakpoint-down(md) {}
+*/
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $black;
+  background-color: $white;
+  font-family: $font-family;
+  font-weight: 400;
+  margin: 0;
+  line-height: var(--line-height);
+  word-break: keep-all;
+  letter-spacing: var(--letter-spacing);
+
+  &.no-scroll { // body 스크롤 금지
+    overflow: hidden; /* 스크롤 잠금 */
+    //position: fixed; /* iOS 모바일 주소창 이슈 방지 */
+    width: 100%;
+  }
+}
+
+main {
+  height: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+svg {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a,
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
+
+pre {
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+  font-weight: 300;
+}
+
+// * 저장된 정보 입력시 인풋, 셀렉트 배경색상 수정
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// * 셀렉트박스 selected 색상 변경
+select.form-select:invalid {
+  color: $gray-99;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+// * input type number 일때 수량조절버튼 숨김
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  margin-bottom: 0;
+  line-height: var(--line-height);
+}
+
+summary {
+  list-style: none;
+
+  // 사파리 초기화
+  &::-webkit-details-marker,
+  &::marker {
+    display: none;
+  }
+}
+
+/* ========================================================================
+ * 텍스트 중앙정렬
+*/
+.text-center {
+  text-align: center;
+}
+
+/* ========================================================================
+ * border radius
+*/
+.rounded-4 {
+  border-radius: 4px;
+}
+
+/* ========================================================================
+ * 각 모바일, 웹 에서 보이고 숨기기
+*/
+.d-mo-none {
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+  @include media-breakpoint-up(lg) {
+    display: flex !important;
+  }
+}
+
+.d-pc-none {
+  @include media-breakpoint-down(md) {
+    display: flex !important;
+  }
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}
+
+/* ========================================================================
+ * 드롭다운
+*/
+/*
+.drop-down__wrapper {
+  position: relative;
+
+  // 드롭다운 클릭
+  .drop-down__link {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 200px;
+    }
+
+    // 드롭다운 클릭 했을때
+    &.is-active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .icon-plus {
+      transition: transform .4s ease;
+    }
+
+    &.is-active .icon-plus {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // 드롭다운 목록
+  .drop-down__list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 37px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 1rem 8px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transition: transform .4s ease;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 200px;
+    }
+  }
+}
+*/
+
+/* ========================================================================
+ * 높이 100%
+*/
+.h-100 {
+  height: 100%;
+}
+
+/* ========================================================================
+ * layout
+*/
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ========================================================================
+ * 서브페이지 - 텍스트 앞에 primary 체크 아이콘 있는 p
+*/
+.check-p {
+  &:before {
+    content: "✓ ";
+    font-size: 16px;
+    color: #00BAD1;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+}

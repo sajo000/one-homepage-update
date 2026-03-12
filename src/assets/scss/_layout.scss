@@ -1,0 +1,335 @@
+@use "variables2" as *;
+
+/* ========================================================================
+ * header
+*/
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  z-index: 9999;
+  will-change: transform; // 혹시 모를 플리킹 방지 (선택)
+  user-select: none;
+  box-sizing: border-box;
+  @include media-breakpoint-up(lg) {
+    height: 84px;
+  }
+}
+
+/* 👇 본문 영역은 헤더보다 무조건 낮아야 함 */
+#smooth-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.header-container {
+  // GSAP 충돌 방지를 위해 명시적으로 none 설정
+  transition: none !important;
+  padding: 1rem 0;
+  @include media-breakpoint-up(lg) {
+    padding: 20px 0px;
+  }
+
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    @include media-breakpoint-up(lg) {
+      height: 44px;
+    }
+  }
+}
+
+.header-container .logo,
+.mobile-gnb__header .logo {
+  //height: 44px;
+  color: #00C2DE;
+  line-height: 1;
+
+  svg {
+    width: 110px;
+    height: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    //height: 32px;
+
+    svg {
+      width: 150px;
+      height: auto;
+    }
+  }
+}
+
+#header.top > .header-container {
+  background-color: transparent;
+}
+
+#header.hide > .header-container {
+  transform: translateY(-100%);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#header.up > .header-container {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#header.open > .header-container {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#header .nav__wrapper {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ========================================================================
+ * 모바일 매뉴
+*/
+// 기본 상태: 화면 오른쪽 밖으로 숨김
+.mobile-gnb {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #fff;
+  z-index: 10000;
+  transform: translateX(100vw); // 화면 오른쪽 밖으로 숨김
+  overflow-y: auto;
+  visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+// 활성화 상태: GNB가 열려있을 때 (GSAP 애니메이션과 함께 사용)
+.mobile-gnb.is-active {
+  // GSAP가 애니메이션을 담당, 여기서는 z-index나 다른 시각적 속성만 제어
+  visibility: visible;
+}
+
+// GNB 헤더 및 닫기 버튼 스타일링
+.mobile-gnb__header {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 1rem 1rem 0;
+}
+
+.mobile-gnb__close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-gnb__nav {
+  flex-grow: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* iOS에서 스크롤을 부드럽게 함 */
+  padding: 40px 1rem;
+}
+
+// 언어 변경
+.mobile-gnb__lang {
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+  a,
+  span {
+    color: #66666680;
+  }
+
+  a.active {
+    color: #666666ff;
+  }
+}
+
+// 모바일 메뉴 활성화
+.mobile-nav__item.active {
+  color: $primary;
+}
+
+// 모바일 서브메뉴 활성화
+.mobile-gnb__nav--deps1 .active {
+  color: $primary;
+}
+
+/* ========================================================================
+ * 웹 메뉴
+*/
+.web-gnb__nav {
+  @include media-breakpoint-up(lg) {
+    display: flex !important;
+    align-items: center;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+// 웹 메뉴 호버시 컬러
+.web-gnb__item:hover > a {
+  opacity: 0.4;
+}
+
+// 웹 메뉴 활성화시 컬러 변경
+.web-gnb__item.active > a {
+  color: $primary;
+  opacity: 1;
+}
+
+.web-gnb__item.service {
+  position: relative;
+}
+
+/* 위치 잡는 래퍼 */
+.gnb__nav--deps1-position {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: -16px;
+  z-index: 10;
+  visibility: hidden;
+}
+
+/* 실제 하위 메뉴 스타일 */
+.gnb__nav--deps1 {
+  width: 200px;
+  padding: 12px 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+// 하위 메뉴 아이템 스타일
+.gnb__nav--deps1-item {
+  padding: 12px 0 12px 20px;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  .active {
+    color: $primary;
+  }
+}
+
+
+// 언어 변경
+.web-gnb__lang {
+  a,
+  span {
+    color: $gray-66;
+    opacity: 0.5;
+  }
+
+  a.active {
+    opacity: 1;
+  }
+}
+
+/* ========================================================================
+ * 푸터
+*/
+#footer .logo-svg {
+  width: 110px;
+
+  @include media-breakpoint-up(lg) {
+    width: 150px;
+  }
+}
+/*
+.footer-container > .container {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+// 푸터 패밀리 사이트 너비
+#footer .drop-down__wrapper {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 200px;
+  }
+}
+*/
+
+/* ========================================================================
+ * 서브페이지 상단 히어로 이미지
+*/
+.sub-page__hero-img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sub-page__hero-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* ========================================================================
+ * 서브페이지 바텀 배너 공통 영역
+*/
+/*
+.sub-page__bottom-banner {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.sub-page__bottom-btn-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.sub-page__bottom-btn-item {
+  @include media-breakpoint-up(lg) {
+    width: 280px;
+  }
+}
+
+.sub-page__bottom-link {
+  width: 100%;
+  border-color: $white !important;
+}
+ */

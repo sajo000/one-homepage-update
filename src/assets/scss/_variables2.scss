@@ -1,0 +1,249 @@
+// ========================================================================
+// 폰트 패밀리 지정
+$font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+// 폰트 패밀리 지정
+// ========================================================================
+
+// ========================================================================
+// 색상 변수 지정
+$primary: #00C2DE;
+$primary-typo: #1F99AB;
+
+$bg-blue: #F2F8FF;
+$bg-blue-gray: #F1F2F5;
+$bg-navy: #152034;
+
+$danger: #FF4263;
+$danger-lite: #FFE8EC;
+$warning: #FF8000;
+$warning-lite: #FFF0E0;
+$success: #01A235;
+$success-lite: #E1F4E7;
+
+$white: #ffffff;
+$gray-ee: #eeeeee;
+$gray-dd: #dddddd;
+$gray-99: #999999;
+$gray-93: #939EAD;
+$gray-66: #666666;
+$gray-4e: #4E556C;
+$gray-33: #333333;
+$black: #000000;
+
+$bob: #3BD0BC;
+$kp: #FEE500;
+// 색상 변수 지정
+// ========================================================================
+
+// ========================================================================
+// 마진, 패딩 간격 재정의
+$spacer: 1rem !default;
+
+$spacers: (
+    0: 0,
+    2px: 0.125rem,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: 0.375rem,
+    10: 0.625rem,
+    12: 0.75rem,
+    18: 1.125rem,
+    20: 1.25rem,
+    30: 1.875rem,
+    32: 2rem,
+    40: 2.5rem,
+    56: 3.5rem,
+    60: 3.75rem,
+    64:	4rem,
+    80: 5rem,
+    120: 7.5rem,
+    160: 10rem
+);
+
+// 유틸리티 클래스 생성 믹스인
+@mixin generate-spacers($breakpoint: '') {
+  // 접미사 정의 (루프 밖에서도 사용 가능하도록 믹스인 시작 시 정의)
+  $suffix: if($breakpoint == '', '', '-#{$breakpoint}');
+
+  @each $key, $value in $spacers {
+    // 1. 전체 (All sides)
+    .m#{$suffix}-#{$key} { margin: $value !important; }
+    .p#{$suffix}-#{$key} { padding: $value !important; }
+
+    // 2. 상하 (Vertical)
+    .my#{$suffix}-#{$key} { margin-top: $value !important; margin-bottom: $value !important; }
+    .py#{$suffix}-#{$key} { padding-top: $value !important; padding-bottom: $value !important; }
+
+    // 3. 좌우 (Horizontal)
+    .mx#{$suffix}-#{$key} { margin-left: $value !important; margin-right: $value !important; }
+    .px#{$suffix}-#{$key} { padding-left: $value !important; padding-right: $value !important; }
+
+    // 4. 상 (Top)
+    .mt#{$suffix}-#{$key} { margin-top: $value !important; }
+    .pt#{$suffix}-#{$key} { padding-top: $value !important; }
+
+    // 5. 하 (Bottom)
+    .mb#{$suffix}-#{$key} { margin-bottom: $value !important; }
+    .pb#{$suffix}-#{$key} { padding-bottom: $value !important; }
+
+    // 6. 시작 (Start)
+    .ms#{$suffix}-#{$key} { margin-left: $value !important; }
+    .ps#{$suffix}-#{$key} { padding-left: $value !important; }
+
+    // 7. 끝 (End)
+    .me#{$suffix}-#{$key} { margin-right: $value !important; }
+    .pe#{$suffix}-#{$key} { padding-right: $value !important; }
+  }
+
+  // 수평 중앙 정렬 (Horizontal Centering) - 이제 $suffix를 루프 외부에서 안전하게 사용합니다.
+  .mx#{$suffix}-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+// 기본 여백 유틸리티 생성 (접두사 없음: xs에 적용)
+@include generate-spacers();
+
+// 마진, 패딩 간격 재정의
+// ========================================================================
+
+// ========================================================================
+// container max-width 재정의
+// 부트스트랩 5 기본 중단점 맵
+$grid-breakpoints: (
+    //xs: 0,
+    //sm: 576px,
+    md: 768px, // 폰트/아이콘 PC 사이즈 기준으로 사용될 중단점
+    lg: 992px,
+    //xl: 1200px,
+    //xxl: 1400px
+);
+
+// 미디어쿼리 믹스인 (원본 유지)
+@mixin media-breakpoint-down($name) {
+  $next: null;
+  $keys: map-keys($grid-breakpoints);
+  $index: index($keys, $name);
+  @if $index and $index < length($keys) {
+    $next: nth($keys, $index + 1);
+  }
+  $max: if($next, map-get($grid-breakpoints, $next) - 0.02px, null);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($grid-breakpoints, $name)) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: map-get($grid-breakpoints, $name);
+
+  @if $min != null {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$name}";
+  }
+}
+// container max-width 재정의
+// ========================================================================
+
+// ========================================================================
+// 폰트사이즈 및 아이콘 사이즈 설정
+$custom-font-size: (
+    64:	4rem,
+    50: 3.125rem,
+    48:	3rem,
+    44:	2.75rem,
+    36:	2.25rem,
+    32: 2rem,
+    30: 1.875rem,
+    28: 1.75rem,
+    26: 1.625rem,
+    24: 1.5rem,
+    20: 1.25rem,
+    18: 1.125rem,
+    16: 1rem,
+    14: 0.875rem,
+    12: 0.75rem,
+);
+
+// ------------------------------------------------------------------------
+// 1. 폰트 사이즈 유틸리티 (m: xs, p: lg)
+// ------------------------------------------------------------------------
+
+// A. 모바일 (m) 크기 적용: 가장 작은 중단점 (xs)에 적용
+@each $key, $value in $custom-font-size {
+  .fs-m-#{$key} {
+    font-size: $value !important;
+  }
+}
+
+// B. PC (p) 크기 적용: lg 중단점 (768px) 이상에 적용
+@include media-breakpoint-up(lg) {
+  @each $key, $value in $custom-font-size {
+    .fs-p-#{$key} {
+      font-size: $value !important;
+    }
+  }
+}
+
+// ------------------------------------------------------------------------
+// 2. 아이콘 사이즈 유틸리티 (m: xs, p: lg)
+// ------------------------------------------------------------------------
+$custom-icon-size: 20px !default;
+
+$custom-icon-size: (
+    16: 1rem,
+    20: 1.25rem,
+    24: 1.5rem,
+    30: 1.875rem,
+    32: 2rem,
+    48: 3rem
+);
+
+// A. 모바일 (m) 크기 적용: 가장 작은 중단점 (xs)에 적용
+@each $key, $value in $custom-icon-size {
+  .is-m-#{$key} {
+    display: flex;
+    width: $value !important;
+    height: $value !important;
+  }
+}
+
+// B. PC (p) 크기 적용: lg 중단점 (768px) 이상에 적용
+@include media-breakpoint-up(lg) {
+  @each $key, $value in $custom-icon-size {
+    .is-p-#{$key} {
+      display: flex;
+      width: $value !important;
+      height: $value !important;
+    }
+  }
+}
+
+
+// ------------------------------------------------------------------------
+// 3. 여백 유틸리티 (Bootstrap 표준 중단점 사용)
+// ------------------------------------------------------------------------
+@each $breakpoint, $min-width in $grid-breakpoints {
+  // xs 중단점은 이미 기본 클래스로 처리되었으므로 생략
+  @if $breakpoint != xs {
+    @include media-breakpoint-up($breakpoint) {
+      // 반응형 마진/패딩 여백
+      @include generate-spacers($breakpoint);
+    }
+  }
+}
+// 폰트사이즈, 아이콘 사이즈 생성 및 반응형 적용
+// ========================================================================

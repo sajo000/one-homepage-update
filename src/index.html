@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One-Express</title>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Header/Footer Component, Header Function -->
+  <script src="assets/js/common.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<main>
+  <!-- 헤더 -->
+  <div id="header-placeholder"></div>
+  <!-- / 헤더 -->
+
+  <div class="main-content-wrapper">
+    <!--    서브페이지 히어로 이미지 -->
+    <section class="sub-page__hero-wrapper">
+      <div class="sub-page__hero-img">
+        <img src="assets/images/index/hero-img-one.webp" alt="">
+
+        <!-- 서브페이지 상단 텍스트 -->
+        <div class="sub-page__hero-text fc-white">
+          <div class="container">
+            <div class="fs-m-20 fs-p-28 fw-semibold" data-i18n="one_hero_sub"></div>
+            <div class="fs-m-30 fs-p-64 fw-bold mt-3" data-i18n="one_hero_title"></div>
+            <div class="sub-page__hero-btn-group mt-40 mt-lg-80">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYcB8kTC0Ji2vseJjrY-1jc9HfKBs9IADEjc8p5WuuZJtaLw/viewform?usp=send_form" target="_blank" class="btn btn-white btn-lg">
+                <span data-i18n="one_hero_btn_quote"></span>
+                <i class="icon icon-arrow-right is-m-20 is-p-20 bg-black"></i>
+              </a>
+              <a href="https://join.one-express.kr/signup/1" target="_blank" class="btn btn-primary btn-lg">
+                <span data-i18n="one_hero_btn_signup"></span>
+                <i class="icon icon-arrow-right is-m-20 is-p-20 bg-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--    / 서브페이지 히어로 이미지 -->
+
+    <!--      시간 낭비 -->
+    <section class="waste-time__wrapper bg-navy py-80 py-lg-160">
+      <div class="container">
+        <!-- 타이틀 텍스트 -->
+        <div class="waste-time__text-wrapper text-center">
+          <div class="fs-m-24 fs-p-36 fw-bold fc-white" data-i18n="one_waste_time_text"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+
+        <ul class="waste-time__item-wrapper mt-32 mt-lg-5">
+          <li class="waste-time__item">
+            <div class="waste-time__item-img">
+              <img src="assets/images/index/waste-time-img1.svg" alt="">
+            </div>
+            <div class="fs-m-18 fs-p-18 fw-medium fc-white text-center" data-i18n="one_waste_time_item1"></div>
+          </li>
+          <li class="waste-time__item">
+            <div class="waste-time__item-img">
+              <img src="assets/images/index/waste-time-img2.svg" alt="">
+            </div>
+            <div class="fs-m-18 fs-p-18 fw-medium fc-white text-center" data-i18n="one_waste_time_item2"></div>
+          </li>
+          <li class="waste-time__item">
+            <div class="waste-time__item-img">
+              <img src="assets/images/index/waste-time-img3.svg" alt="">
+            </div>
+            <div class="fs-m-18 fs-p-18 fw-medium fc-white text-center" data-i18n="one_waste_time_item3"></div>
+          </li>
+          <li class="waste-time__item">
+            <div class="waste-time__item-img">
+              <img src="assets/images/index/waste-time-img4.svg" alt="">
+            </div>
+            <div class="fs-m-18 fs-p-18 fw-medium fc-white text-center" data-i18n="one_waste_time_item4"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--      / 시간 낭비 -->
+
+    <!--      배경 있는 배너 -->
+    <section class="one-bg-in-banner__wrapper">
+      <div class="container">
+        <div class="fs-m-18 fs-p-24 fw-semibold fc-black text-center one-bg-in-banner__text">
+          <div class="fs-m-24 fs-p-36 fw-bold fc-white" data-i18n="one_bg_in_banner_text1"></div>
+          <div class="fs-m-16 fs-p-20 fw-medium fc-white mt-12" data-i18n="one_bg_in_banner_text2"></div>
+        </div>
+      </div>
+    </section>
+    <!--      / 배경 있는 배너 -->
+
+    <!--      모든 판매 채널의 주문, 클릭 한번으로 통합 관리 -->
+    <section class="one-click-order-management__wrapper py-80 py-lg-160">
+      <div class="container">
+        <!-- 타이틀 텍스트 -->
+        <div class="one-click-order-management__text-wrapper text-center">
+          <div class="one-solution-badge">Solution 01</div>
+          <div class="fs-m-24 fs-p-36 fw-bold fc-black mt-20" data-i18n="one_click_order_management_text"></div>
+          <div class="fs-m-16 fs-p-20 fw-medium fc-333 mt-20" data-i18n="one_click_order_management_content"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+
+<!--        <div class="one-click-order-management__middle-img mt-5 mt-lg-64">-->
+<!--          <img src="assets/images/index/@one-click-order-management-img.webp" alt="">-->
+<!--        </div>-->
+
+        <ul class="one-click-order-management__item-wrapper mt-32 mt-lg-5">
+          <li class="one-click-order-management__item">
+            <div>
+              <i class="icon icon-api is-m-24 is-p-24 bg-primary"></i>
+            </div>
+            <div class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="one_click_order_management_item1_1"></div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="one_click_order_management_item1_2"></div>
+          </li>
+          <li class="one-click-order-management__item">
+            <div>
+              <i class="icon icon-setting is-m-24 is-p-24 bg-primary"></i>
+            </div>
+            <div class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="one_click_order_management_item2_1"></div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="one_click_order_management_item2_2"></div>
+          </li>
+          <li class="one-click-order-management__item">
+            <div>
+              <i class="icon icon-rotate is-m-24 is-p-24 bg-primary"></i>
+            </div>
+            <div class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="one_click_order_management_item3_1"></div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="one_click_order_management_item3_2"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--      / 모든 판매 채널의 주문, 클릭 한번으로 통합 관리 -->
+
+    <!--      클릭 몇 번으로 비즈니스를 전 세계로 확장 -->
+    <section class="few-clicks-global__wrapper bg-blue-gray py-80 py-lg-160">
+      <div class="container">
+        <!-- 타이틀 텍스트 -->
+        <div class="few-clicks-global__text-wrapper text-center">
+          <div class="one-solution-badge">Solution 02</div>
+          <div class="fs-m-24 fs-p-36 fw-bold fc-black mt-20" data-i18n="few_clicks_global_text"></div>
+          <div class="fs-m-16 fs-p-20 fw-medium fc-333 mt-20" data-i18n="few_clicks_global_content"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+
+<!--        <div class="few-clicks-global__middle-img mt-5 mt-lg-64">-->
+<!--          <img src="assets/images/index/@few-clicks-global-img.webp" alt="">-->
+<!--        </div>-->
+
+        <ul class="few-clicks-global__item-wrapper mt-32 mt-lg-5">
+          <li class="few-clicks-global__item">
+            <div class="few-clicks-global__item-title">
+              <i class="icon icon-paper is-m-24 is-p-24 bg-primary"></i>
+              <h3 class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="few_clicks_global_item1_1"></h3>
+            </div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="few_clicks_global_item1_2"></div>
+          </li>
+          <li class="few-clicks-global__item">
+            <div class="few-clicks-global__item-title">
+              <i class="icon icon-pin is-m-24 is-p-24 bg-primary"></i>
+              <h3 class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="few_clicks_global_item2_1"></h3>
+            </div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="few_clicks_global_item2_2"></div>
+          </li>
+          <li class="few-clicks-global__item">
+            <div class="few-clicks-global__item-title">
+              <i class="icon icon-map is-m-24 is-p-24 bg-primary"></i>
+              <h3 class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="few_clicks_global_item3_1"></h3>
+            </div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="few_clicks_global_item3_2"></div>
+          </li>
+          <li class="few-clicks-global__item">
+            <div class="few-clicks-global__item-title">
+              <i class="icon icon-global is-m-24 is-p-24 bg-primary"></i>
+            <h3 class="fs-m-18 fs-p-24 fw-semibold fc-black" data-i18n="few_clicks_global_item4_1"></h3>
+            </div>
+            <div class="fs-m-16 fs-p-16 fc-black" data-i18n="few_clicks_global_item4_2"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--      / 클릭 몇 번으로 비즈니스를 전 세계로 확장 -->
+
+    <!--      고객 비즈니스 유형에 따라 배송방식 제공 -->
+    <section class="business-type-shipping__wrapper py-80 py-lg-160">
+      <div class="container">
+        <!-- 타이틀 텍스트 -->
+        <div class="business-type-shipping__text-wrapper text-center">
+          <div class="one-solution-badge">Solution 03</div>
+          <div class="fs-m-24 fs-p-36 fw-bold fc-black mt-20" data-i18n="business_type_shipping_text"></div>
+          <div class="fs-m-16 fs-p-20 fw-medium fc-333 mt-20" data-i18n="business_type_shipping_content"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+
+        <ul class="business-type-shipping__item-wrapper mt-5 mt-lg-64">
+          <li class="business-type-shipping__item baroshipping">
+            <div class="fs-m-24 fs-p-32 fw-bold fc-white" data-i18n="business_type_shipping_item1_1"></div>
+            <div class="fs-m-16 fs-p-20 fw-medium fc-white mt-4" data-i18n="business_type_shipping_item1_2"></div>
+            <div class="fs-m-16 fs-p-16 fc-white mt-4" data-i18n="business_type_shipping_item1_3"></div>
+            <div class="fs-m-16 fs-p-16 fc-white mt-6" data-i18n="business_type_shipping_item1_4"></div>
+            <div class="business-type-shipping__item-btn-wrapper">
+              <a href="baro-dispatch.html" class="btn btn-white btn-lg">
+                <span data-i18n="business_type_shipping_item1_5"></span>
+                <i class="icon icon-arrow-right is-m-20 is-p-20 bg-black"></i>
+              </a>
+            </div>
+          </li>
+          <li class="business-type-shipping__item fulfillment">
+            <div class="fs-m-24 fs-p-32 fw-bold fc-white" data-i18n="business_type_shipping_item2_1"></div>
+            <div class="fs-m-16 fs-p-20 fw-medium fc-white mt-4" data-i18n="business_type_shipping_item2_2"></div>
+            <div class="fs-m-16 fs-p-16 fc-white mt-4" data-i18n="business_type_shipping_item2_3"></div>
+            <div class="fs-m-16 fs-p-16 fc-white mt-6" data-i18n="business_type_shipping_item2_4"></div>
+            <div class="business-type-shipping__item-btn-wrapper">
+              <a href="fulfillment.html" class="btn btn-white btn-lg">
+                <span data-i18n="business_type_shipping_item2_5"></span>
+                <i class="icon icon-arrow-right is-m-20 is-p-20 bg-black"></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--      / 고객 비즈니스 유형에 따라 배송방식 제공 -->
+
+    <!--      초기 세팅 비용 무료 -->
+    <section class="free-setup__wrapper py-80 py-lg-160">
+      <div class="container">
+        <!-- 타이틀 텍스트 -->
+        <div class="few-clicks-global__text-wrapper text-center">
+          <div class="one-solution-badge">Solution 04</div>
+          <div class="fs-m-24 fs-p-36 fw-bold fc-white mt-20" data-i18n="free_setup_text"></div>
+          <div class="fs-m-16 fs-p-20 fw-medium fc-white mt-20" data-i18n="free_setup_content"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+      </div>
+    </section>
+    <!--      / 초기 세팅 비용 무료 -->
+
+    <!--      이런 분들에게 추천 -->
+    <section class="one-recommendation__wrapper bg-blue-gray py-80 py-lg-160">
+      <div class="container">
+        <!-- 타이틀 텍스트 -->
+        <div class="one-recommendation__text-wrapper text-center">
+          <div class="fs-m-24 fs-p-36 fw-bold fc-black" data-i18n="one_recommendation_text"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+
+        <ul class="one-recommendation__item-wrapper mt-32 mt-lg-5">
+          <li class="one-recommendation__item">
+            <div class="one-recommendation__item-img">
+              <img src="assets/images/index/one-recommendation-img1.svg" alt="">
+            </div>
+            <div class="fs-m-16 fs-p-20 fw-medium fc-black text-center" data-i18n="one_recommendation_item1"></div>
+          </li>
+          <li class="one-recommendation__item">
+            <div class="one-recommendation__item-img">
+              <img src="assets/images/index/one-recommendation-img2.svg" alt="">
+            </div>
+            <div class="fs-m-16 fs-p-20 fw-medium fc-black text-center" data-i18n="one_recommendation_item2"></div>
+          </li>
+          <li class="one-recommendation__item">
+            <div class="one-recommendation__item-img">
+              <img src="assets/images/index/one-recommendation-img3.svg" alt="">
+            </div>
+            <div class="fs-m-16 fs-p-20 fw-medium fc-black text-center" data-i18n="one_recommendation_item3"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--      / 이런 분들에게 추천 -->
+
+    <!-- 원배송 글로벌 파트너스 -->
+    <section class="one-partners__wrapper py-80 py-lg-160">
+      <div class="container-fluid">
+        <!-- 타이틀 텍스트 -->
+        <div class="container one-partners__text-wrapper text-center">
+          <div class="fs-m-24 fs-p-36 fw-bold fc-black" data-i18n="one_partners_content"></div>
+        </div>
+        <!-- / 타이틀 텍스트 -->
+
+        <div class="section-marquee mt-5 mt-lg-64">
+          <!-- Ticker 1: 왼쪽으로 흐름 (기본) -->
+          <div class="ticker">
+            <div class="ticker__run">
+              <div><img src="assets/images/index/our-partners-australia-post.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-dhl.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-fedex.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-sf-express.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-aci.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-hanjin.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-lotte-global-logistics.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-raf.webp" alt=""></div>
+            </div>
+          </div>
+          <!-- Ticker 2: 오른쪽으로 흐름 (arabic 클래스 사용) -->
+          <div class="ticker arabic">
+            <div class="ticker__run">
+              <div><img src="assets/images/index/our-partners-singapore-post.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-ups.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-kse.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-dpd.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-parxl.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-ninjavan.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-yamato.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-trax.webp" alt=""></div>
+              <div><img src="assets/images/index/our-partners-janio.webp" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / 원배송 글로벌 파트너스 -->
+
+    <!--      서브페이지 바텀 배너 --
+    <section class="sub-page__bottom-banner one__bottom-banner">
+      <div class="container sub-page__bottom-btn-group">
+        <div class="sub-page__bottom-btn-item text-center">
+          <a href="https://one-express.kr/" target="_blank" class="btn-outline-black sub-page__bottom-link">
+            <span data-i18n="one_bottom_link1"></span>
+            <i class="icon icon-link is-m-20 is-p-20 bg-black"></i>
+          </a>
+        </div>
+        <div class="sub-page__bottom-btn-item text-center">
+          <a href="https://one-express.kr/wp-content/uploads/2025/05/%EC%9B%90%EB%B0%B0%EC%86%A1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%86%8C%EA%B0%9C%EC%84%9C.pdf"
+             target="_blank" class="btn-outline-black sub-page__bottom-link">
+            <span data-i18n="one_bottom_link2"></span>
+            <i class="icon icon-link is-m-20 is-p-20 bg-black"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    !--      / 서브페이지 바텀 배너 -->
+  </div>
+
+  <!-- 푸터 -->
+  <div id="footer-placeholder"></div>
+  <!-- / 푸터 -->
+</main>
+
+
+<script>
+  // =========================================================
+  // ⭐ GSAP 플러그인 등록
+  // =========================================================
+  gsap.registerPlugin(ScrollTrigger);
+
+  // =========================================================
+  // ⭐ 공통 애니메이션 함수 정의
+  // =========================================================
+  /**
+   * 밑에서 위로 올라오는 페이드인 애니메이션을 적용합니다.
+   * @param {string} selector - 애니메이션을 적용할 요소 셀렉터
+   * @param {string} triggerSelector - 스크롤 이벤트 트리거 요소 셀렉터
+   * @param {string} startPosition - 애니메이션 시작 위치 (예: "top 85%")
+   * @param {number} staggerValue - 순차 등장 지연 시간 (초)
+   */
+  const fadeInFromBottom = (selector, triggerSelector, startPosition = "top 85%", staggerValue = 0) => {
+    gsap.fromTo(selector,
+        {y: 50, opacity: 0},
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          stagger: staggerValue,
+          scrollTrigger: {
+            trigger: triggerSelector,
+            start: startPosition,
+            toggleActions: "play none none none",
+            once: true, // 대부분의 섹션은 한 번만 실행되도록 설정
+          }
+        }
+    );
+  };
+
+  // =========================================================
+  // Ticker 애니메이션 함수 정의 (코드 중복 방지)
+  // =========================================================
+  function createTickerAnimation(ticker, durationOffset) {
+    const tickerRun = ticker.querySelector('.ticker__run');
+    const tickerContent = tickerRun.innerHTML;
+    const isArabic = ticker.classList.contains('arabic');
+
+    // 1. 콘텐츠 복제
+    if (!tickerRun.dataset.cloned) {
+      const tickerTextSection = `<div class="ticker__img">${tickerContent}</div>`;
+      tickerRun.innerHTML = `${tickerTextSection}${tickerTextSection}`; // 💡 2번 복제로 충분히 자연스러운 루프 구현 가능
+      tickerRun.dataset.cloned = 'true';
+    }
+
+    // 2. 애니메이션 변수 계산
+    const textSections = tickerRun.querySelectorAll('div.ticker__img');
+    const loopDistance = textSections[0].offsetWidth;
+    const endValue = isArabic ? loopDistance : -loopDistance;
+    const tickerDuration = loopDistance / durationOffset;
+
+    // Arabic 티커의 초기 위치 설정 (0부터 시작하여 오른쪽으로 이동)
+    if (isArabic) {
+      gsap.set(tickerRun, {x: -loopDistance});
+    }
+
+    // 3. GSAP 애니메이션 실행
+    gsap.to(tickerRun, {
+      x: isArabic ? 0 : endValue,
+      ease: 'none',
+      duration: tickerDuration,
+      repeat: -1,
+      // 안정적인 무한 루프를 위한 modifiers 로직 (2번 복제 로직에 맞게 조정)
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % loopDistance)
+      }
+    });
+  }
+
+  async function initializeWeb() {
+    console.log("Header/Footer 로드 완료. GSAP 초기화 시작.");
+
+    // =========================================================
+    // 1. 서브메뉴 타이틀 애니메이션
+    // =========================================================
+    gsap.fromTo(".sub-page__hero-text > div",
+        {y: 30, opacity: 0},
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          delay: 0.2,
+          stagger: 0.2,
+          ease: "power2.inOut",
+        }
+    );
+
+    // =========================================================
+    // 2. 시간 낭비 애니메이션 (fadeInFromBottom 사용)
+    // =========================================================
+    // 헤더 텍스트
+    fadeInFromBottom(".waste-time__text-wrapper > div", ".waste-time__wrapper");
+    // 아이템
+    fadeInFromBottom(".waste-time__item", ".waste-time__item-wrapper", "top 85%", 0.2);
+
+    // =========================================================
+    // 3. 배경 있는 배너 애니메이션 (fadeInFromBottom 사용)
+    // =========================================================
+    // Note: y:30 대신 y:50으로 통일하여 일관성을 높였습니다.
+    fadeInFromBottom(".one-bg-in-banner__text > div", ".one-bg-in-banner__wrapper");
+
+    // =========================================================
+    // 4. 모든 판매 채널의 주문, 클릭 한번으로 통합 관리 애니메이션 (Solution 01)
+    // =========================================================
+    // 헤더 텍스트
+    fadeInFromBottom(".one-click-order-management__text-wrapper > div", ".one-click-order-management__wrapper");
+    // 중간 이미지
+    fadeInFromBottom(".one-click-order-management__middle-img", ".one-click-order-management__wrapper", "top 75%", 0);
+    // 아이템
+    fadeInFromBottom(".one-click-order-management__item", ".one-click-order-management__item-wrapper", "top 85%", 0.2);
+
+    // =========================================================
+    // 5. 클릭 몇 번으로 비즈니스를 전 세계로 확장 애니메이션 (Solution 02)
+    // =========================================================
+    // 헤더 텍스트
+    fadeInFromBottom(".few-clicks-global__text-wrapper > div", ".few-clicks-global__wrapper");
+    // 중간 이미지
+    fadeInFromBottom(".few-clicks-global__middle-img", ".few-clicks-global__wrapper", "top 75%", 0);
+    // 아이템
+    fadeInFromBottom(".few-clicks-global__item", ".few-clicks-global__item-wrapper", "top 85%", 0.2);
+
+    // =========================================================
+    // 6. 고객 비즈니스 유형에 따라 배송방식 제공 애니메이션 (Solution 03)
+    // =========================================================
+    // 헤더 텍스트
+    fadeInFromBottom(".business-type-shipping__text-wrapper > div", ".business-type-shipping__wrapper");
+    // 배송 방식 아이템
+    fadeInFromBottom(".business-type-shipping__item", ".business-type-shipping__item-wrapper", "top 85%", 0.3);
+
+    // =========================================================
+    // 7. 초기 세팅 비용 무료 애니메이션 (Solution 04)
+    // =========================================================
+    // 헤더 텍스트
+    fadeInFromBottom(".free-setup__wrapper .few-clicks-global__text-wrapper > div", ".free-setup__wrapper");
+
+    // =========================================================
+    // 8. 이런 분들에게 추천 애니메이션
+    // =========================================================
+    // 헤더 텍스트
+    fadeInFromBottom(".one-recommendation__text-wrapper > div", ".one-recommendation__wrapper");
+    // 추천 아이템
+    fadeInFromBottom(".one-recommendation__item", ".one-recommendation__item-wrapper", "top 85%", 0.2);
+
+    // =========================================================
+    // 9. 글로벌 파트너스
+    // =========================================================
+    // 1. 헤더 텍스트 애니메이션 (밑에서 위로 올라옴)
+    // one-partners__wrapper 뷰포트 85%에 진입할 때 트리거
+    gsap.fromTo(".one-partners__text-wrapper > div",
+        {y: 50, opacity: 0}, // from (아래에서, 투명하게)
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          stagger: 0.2, // 두 줄의 텍스트를 순차적으로
+          scrollTrigger: {
+            trigger: ".one-partners__wrapper",
+            start: "top 85%", // Wrapper의 상단이 뷰포트 85%에 도달했을 때 시작
+            once: true, // 한 번만 실행
+          }
+        }
+    );
+
+    // 2. 이미지 무한 롤링 티커
+    // 이미지 로드가 완료된 시점이므로 딜레이 없이 실행함
+    const durationOffset = window.innerWidth < 768 ? 50 : 100;
+
+    // 모든 .ticker 요소에 대해 반복
+    document.querySelectorAll('.ticker').forEach((ticker, index) => {
+      const tickerRun = ticker.querySelector('.ticker__run');
+      const tickerContent = tickerRun.innerHTML;
+      const isArabic = ticker.classList.contains('arabic');
+
+      // 2-1. 콘텐츠 복제 및 ticker__img 컨테이너 생성
+      if (!tickerRun.dataset.cloned) {
+        const tickerTextSection = `<div class="ticker__img">${tickerContent}</div>`;
+        tickerRun.innerHTML = `${tickerTextSection}${tickerTextSection}${tickerTextSection}`; // .ticker__img (1줄) 을 3번 반복함.
+        tickerRun.dataset.cloned = 'true';
+        console.log(`Ticker ${index + 1} (${isArabic ? 'Arabic' : 'Default'}) content duplicated successfully (Total 3 copies).`);
+      }
+
+      // 2-2. 애니메이션에 필요한 변수 계산
+
+      const textSections = tickerRun.querySelectorAll('div.ticker__img');
+      const loopDistance = textSections[0].offsetWidth; // 정확한 너비 측정
+      const endValue = isArabic ? loopDistance : -loopDistance;
+      const tickerDuration = loopDistance / durationOffset;
+      const resetPoint = endValue;
+
+      console.log(`Ticker ${index + 1} Loop Distance: ${loopDistance}px, Duration: ${tickerDuration.toFixed(2)}s`);
+
+      // Arabic (오른쪽 롤링) 티커의 경우,
+      // 애니메이션이 자연스럽게 루프되려면 첫 번째 프레임에서 이미 왼쪽으로 loopDistance만큼 이동해 있어야 함
+      if (isArabic) {
+        // 오른쪽으로 롤링할 때 (x: loopDistance), 초기 위치를 -loopDistance로 설정하면
+        // 첫 번째 .ticker__img가 화면 밖에 위치하고 두 번째 .ticker__img가 화면에 보이기 시작함
+        // 애니메이션은 0부터 loopDistance까지 움직임
+        gsap.set(tickerRun, {x: -loopDistance});
+      }
+
+      // 2-3. GSAP 애니메이션 실행
+      gsap.to(tickerRun, {
+        x: isArabic ? 0 : endValue, // Arabic일 때: -loopDistance -> 0 (우측 이동) | Default일 때: 0 -> -loopDistance (좌측 이동)
+        ease: 'none',
+        duration: tickerDuration,
+        repeat: -1,
+        // ✨ 안정적인 무한 루프를 위한 modifiers 로직
+        modifiers: {
+          // x 값이 resetPoint에 도달하면 0으로 리셋 (Arabic은 loopDistance, Default는 -loopDistance)
+          x: gsap.utils.unitize(x => parseFloat(x) % resetPoint)
+        }
+      });
+    });
+
+  } // initializeWeb 함수 끝
+
+  // =========================================================
+  // ✅ ScrollTrigger Refresh
+  // =========================================================
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      ScrollTrigger.refresh(true);
+      console.log("Window load 후 ScrollTrigger 최종 Refresh 완료.");
+    }, 100);
+  });
+</script>
+</body>

@@ -1,0 +1,11 @@
+// 커스텀 변수 파일 로드
+@use "variables2" as *;
+@use "common" as *;
+
+@use "layout";
+@use "fonts";
+@use "icons";
+@use "buttons";
+
+// 페이지별 스타일
+@use "pages/main";

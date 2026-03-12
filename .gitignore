@@ -1,0 +1,4 @@
+# Node.js 패키지 폴더 무시
+node_modules/
+.idea/
+dist/
