@@ -2,9 +2,25 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-5W3VX6JF');</script>
+  <!-- End Google Tag Manager -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>바로출고</title>
-
 
   <!-- GSAP CDN -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -19,7 +35,14 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W3VX6JF"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <main>
   <!-- 헤더 -->
@@ -28,12 +51,35 @@
 
   <div class="main-content-wrapper">
     <!-- 서비스 페이지 히어로 이미지 -->
-    <section class="service-page__hero-wrapper">
-      <div class="service-page__hero-img">
-        <img src="" alt="">
+    <section class="service-page__hero-wrapper pt-100 pb-60 pt-lg-160 pb-100">
+      <div class="container">
+        <div class="service-page__hero-text text-center">
+          <div class="fs-m-18 fs-p-22 fw-bold service-page__round-text">원배송 바로출고</div>
+          <div class="fs-m-32 fs-p-54 fw-bold service-page__hero-title mt-20 mt-lg-4">
+            상품만 보내주세요<br>
+            해외배송은 <span class="service-page__hero-text-gradation">원배송이 끝까지 처리합니다</span>
+          </div>
+        </div>
+
+        <div class="service-page__hero-img-wrapper mt-64 mt-lg-100">
+          <div class="service-page__hero-img first">
+            <img src="assets/images/baro/baro-img-first.svg" alt="">
+            <div class="fs-m-16 fc-white service-page__hero-chat-bubble first">
+              <b>해외배송이 처음</b>이세요?
+            </div>
+          </div>
+          <div class="service-page__hero-img second">
+            <img src="assets/images/baro/baro-img-second.svg" alt="">
+            <div class="fs-m-16 fc-white service-page__hero-chat-bubble second">
+              <b>기존 물류는 그대로</b>유지하고 싶으신가요?
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- / 서비스 페이지 히어로 이미지 -->
+
+
   </div>
 
   <!-- 푸터 -->

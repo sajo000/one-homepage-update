@@ -393,6 +393,7 @@ async function loadLanguage(lang) {
  *
  * *이 함수는 웹 GNB와 모바일 GNB의 모든 언어 링크에 대해 작동합니다.*
  */
+
 function initializeLangToggle() {
   // 웹(web-gnb__lang)과 모바일(mobile-gnb__lang)의 모든 언어 링크를 선택합니다.
   const langLinks = document.querySelectorAll('.web-gnb__lang a.kor, .web-gnb__lang a.eng, .mobile-gnb__lang a.kor, .mobile-gnb__lang a.eng');
