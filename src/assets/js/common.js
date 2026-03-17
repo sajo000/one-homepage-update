@@ -63,7 +63,7 @@ function loadAllComponents() {
 }
 
 // =========================================================
-// 📐 SECTION 2: 헤더 스크롤 (GSAP ScrollTrigger 버전)
+// 📐 SECTION 1: 헤더 스크롤 (GSAP ScrollTrigger 버전)
 // =========================================================
 
 /**
@@ -137,7 +137,7 @@ function initializeHeaderScroll() {
 }
 
 // =========================================================
-// 🖱️ SECTION 3: 웹 헤더 서비스 메뉴 호버 애니메이션 (GSAP)
+// 🖱️ SECTION 2: 웹 헤더 서비스 메뉴 호버 애니메이션 (GSAP)
 // =========================================================
 
 function initializeServiceMenuHover() {
@@ -345,196 +345,7 @@ function initializeNavActiveState() {
 }
 
 // =========================================================
-// 🌎 SECTION 5: KOR / ENG 언어 전환 (Translation Core)
-// =========================================================
-
-// 현재 웹사이트 언어를 추적하는 전역 변수입니다. (초기값: 'ko' 또는 저장된 값)
-let currentLang = localStorage.getItem('siteLang') || 'ko'; // localStorage에서 언어값 로드
-
-/**
- * 선택된 언어에 해당하는 JSON 파일을 로드하고,
- * HTML의 [data-i18n] 속성을 가진 요소들의 텍스트를 교체합니다.
- */
-async function loadLanguage(lang) {
-  try {
-    const basePath = getPathBase();
-
-    // 1. 언어 JSON 파일 경로 생성 및 로드
-    const response = await fetch(basePath + `assets/locales/${lang}.json`);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    const translations = await response.json();
-
-    // 2. HTML 요소 순회 및 텍스트 교체
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-      const key = element.getAttribute('data-i18n');
-      if (translations[key]) {
-        element.innerHTML = translations[key];
-      }
-    });
-
-    // 언어 상태를 localStorage에 저장
-    currentLang = lang;
-    localStorage.setItem('siteLang', lang); // 브라우저 저장소에 'ko' 또는 'en' 저장
-
-    return true;
-  } catch (error) {
-    console.error(`Failed to load language file for ${lang}:`, error);
-    throw error;
-  }
-}
-
-// =========================================================
-// 🖱️ SECTION 6: 언어 전환 이벤트 리스너 초기화
-// =========================================================
-
-/**
- * 언어 선택 버튼(a.kor, a.eng)에 클릭 이벤트를 등록하고,
- * 클릭 시 loadLanguage 함수를 호출하여 텍스트를 전환하며 활성(.active) 클래스를 업데이트합니다.
- *
- * *이 함수는 웹 GNB와 모바일 GNB의 모든 언어 링크에 대해 작동합니다.*
- */
-
-function initializeLangToggle() {
-  // 웹(web-gnb__lang)과 모바일(mobile-gnb__lang)의 모든 언어 링크를 선택합니다.
-  const langLinks = document.querySelectorAll('.web-gnb__lang a.kor, .web-gnb__lang a.eng, .mobile-gnb__lang a.kor, .mobile-gnb__lang a.eng');
-
-  if (langLinks.length === 0) {
-    console.warn("Language toggle links (.kor or .eng) not found.");
-    return;
-  }
-
-  // 1. 초기 활성 상태 설정 및 적용 함수 정의
-  function updateActiveLangState(currentLangCode) {
-    // 모든 언어 링크의 active 클래스 제거
-    langLinks.forEach(link => link.classList.remove('active'));
-
-    // 현재 언어 코드(ko 또는 en)에 해당하는 모든 링크에 active 클래스 추가
-    const targetSelector = currentLangCode === 'ko' ? 'a.kor' : 'a.eng';
-    document.querySelectorAll(targetSelector).forEach(link => {
-      // 웹/모바일 언어 전환 영역 내의 링크만 대상으로 합니다.
-      if (link.closest('.web-gnb__lang') || link.closest('.mobile-gnb__lang')) {
-        link.classList.add('active');
-      }
-    });
-  }
-
-  // 2. 초기 로드 시 활성 상태 설정 (localStorage 또는 기본값 기반)
-  updateActiveLangState(currentLang); // currentLang 변수(localStorage에서 가져온 값) 사용
-
-  // 3. 클릭 이벤트 리스너 등록
-  langLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const selectedLang = this.classList.contains('kor') ? 'ko' : 'en';
-
-      loadLanguage(selectedLang)
-      .then(() => {
-        // 언어 로드 및 localStorage 저장 성공 후, 활성 상태 업데이트
-        updateActiveLangState(selectedLang);
-      })
-      .catch(error => {
-        console.error("Language switch failed:", error);
-      });
-    });
-  });
-
-  console.log("Language toggle listeners initialized.");
-}
-
-// =========================================================
-// 🦔‍ SECTION 7: 서브페이지 바텀 배너 애니메이션
-// =========================================================
-
-/**
- * 서브페이지 하단 배너의 링크 버튼을 스크롤에 따라 아래에서 위로 빠르게 등장시키는 애니메이션을 초기화합니다.
- * 바텀 배너 요소(.sub-page__bottom-banner)가 존재하는 경우에만 동작합니다.
- */
-/*
-function initializeBottomBannerAnimation() {
-  const triggerElement = document.querySelector(".sub-page__bottom-banner");
-
-  // 바텀 배너 요소가 존재할 때만 실행
-  if (triggerElement) {
-    const targets = ".sub-page__bottom-btn-item";
-
-    // 1. 초기 상태 설정 (GSAP가 해당 요소를 즉시 숨기고 위치를 내립니다)
-    gsap.set(targets, {
-      y: 30,
-      opacity: 0
-    });
-
-    // 2. 스크롤 트리거 애니메이션 (숨겨진 상태에서 나타남)
-    gsap.to(targets, {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      stagger: 0.2, // 순차적으로 등장
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: triggerElement, // querySelector로 찾은 요소를 사용
-        start: "top 90%",
-        toggleActions: "play none none none",
-        once: true,
-        // markers: true,
-      }
-    });
-    console.log("Bottom Banner Animation initialized.");
-  } else {
-    // 요소가 없는 경우 실행하지 않음
-    console.log("Bottom Banner element not found. Animation skipped.");
-  }
-}
-*/
-
-// =========================================================
-// 👨‍👩‍👧‍👦 SECTION 8: Family Site 토글 로직 함수 정의
-// =========================================================
-
-/**
- * Family Site 버튼 클릭 시 드롭다운 목록을 표시/숨김 처리하는 기능을 구현합니다.
- * (display: block/none 방식을 사용하여 토글합니다.)
- */
-/*
-function initializeFamilySiteToggle() {
-  const openButtons = document.querySelectorAll('.drop-down__wrapper .drop-down__link');
-
-  // 1. 열기/닫기 버튼 클릭 이벤트
-  openButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      const groupLink = this.closest('.drop-down__wrapper');
-      const groupContent = groupLink.querySelector('.drop-down__list'); // 드롭다운 목록 (.group)
-
-      if (!groupContent) return;
-
-      // display 속성 토글 및 버튼 활성 클래스(.is-active) 토글
-      if (groupContent.style.display === 'flex') {
-        groupContent.style.display = 'none';
-        this.classList.remove('is-active');
-      } else {
-        groupContent.style.display = 'flex';
-        this.classList.add('is-active');
-      }
-    });
-  });
-
-  // 2. 드롭다운 내부 링크 클릭 시 드롭다운 닫기
-  document.querySelectorAll('.drop-down__wrapper .drop-down__list').forEach(link => {
-    link.addEventListener('click', function () {
-      const groupLink = this.closest('.drop-down__wrapper');
-      const groupContent = groupLink.querySelector('.drop-down__list');
-      const openButton = groupLink.querySelector('.drop-down__link');
-
-      if (groupContent) groupContent.style.display = 'none';
-      if (openButton) openButton.classList.remove('is-active');
-    });
-  });
-  console.log("Family Site Toggle initialized.");
-}
-*/
-
-// =========================================================
-// 🍀 SECTION 9: 메인 실행 진입점 (DOM Ready & 순서 보장)
+// 🍀 SECTION 5: 메인 실행 진입점 (DOM Ready & 순서 보장)
 // =========================================================
 
 /**
@@ -550,13 +361,11 @@ document.addEventListener('DOMContentLoaded', () => {
   .then(() => {
     console.log("Header/Footer 로드 완료.");
 
-    // 2. 컴포넌트가 DOM에 삽입된 후, 초기 언어 설정을 로드합니다.
-    return loadLanguage(currentLang);
   })
   .then(() => {
     console.log("언어 로드 완료. 모든 기능 초기화 시작.");
 
-    // 3. 비디오 로드 대기 로직 추가
+    // 2. 비디오 로드 대기 로직 추가
     const mainVideo = document.querySelector('.main-hero__video-wrapper video');
 
     // 메인 페이지(video 요소가 존재)인 경우
@@ -583,13 +392,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 4. 모든 공통 기능 초기화 (비디오 로드와 별개로 실행 가능)
+    // 3. 모든 공통 기능 초기화 (비디오 로드와 별개로 실행 가능)
     initializeHeaderScroll();
     initializeServiceMenuHover();
     initializeMobileGNB();
-    initializeLangToggle();
-    // initializeBottomBannerAnimation();
-    // initializeFamilySiteToggle();
     initializeNavActiveState(); // GNB 활성 상태도 Header 로드 후 바로 가능
 
   })
