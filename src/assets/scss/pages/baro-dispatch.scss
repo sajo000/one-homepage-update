@@ -115,3 +115,258 @@
     flex-direction: row;
   }
 }
+
+/* ========================================================================
+ * 최소 리소스로 손쉬운 글로벌 배송 완료
+*/
+.easy-global__wrapper {
+  background: linear-gradient(180deg, #F9FAFB 0%, #EFF6FF 100%);
+}
+
+.easy-global__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.easy-global__item {
+  flex: 1 1 15%;
+  padding: 40px 0 32px;
+  border: 1px solid #E5E7EB;
+  background: $white;
+  border-radius: 16px;
+}
+
+.easy-global__item-img {
+  margin: auto;
+}
+
+.easy-global__item-img-1 {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13.714px;
+  border: 0.857px solid rgba(16, 185, 129, 0.30);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.40) 0%, rgba(5, 150, 105, 0.30) 35%, rgba(4, 120, 87, 0.25) 70%, rgba(16, 185, 129, 0.20) 100%);
+  box-shadow: 0 6.857px 27.429px 0 rgba(16, 185, 129, 0.20), 0 0.857px 0 0 rgba(255, 255, 255, 0.20) inset;
+}
+
+.easy-global__item-img-2 {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13.714px;
+  border: 0.857px solid rgba(139, 92, 246, 0.30);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.40) 0%, rgba(124, 58, 237, 0.30) 35%, rgba(109, 40, 217, 0.25) 70%, rgba(139, 92, 246, 0.20) 100%);
+  box-shadow: 0 6.857px 27.429px 0 rgba(139, 92, 246, 0.20), 0 0.857px 0 0 rgba(255, 255, 255, 0.20) inset;
+}
+
+.easy-global__item-img-3 {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13.714px;
+  border-radius: 13.714px;
+  border: 0.857px solid rgba(251, 191, 36, 0.30);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.40) 0%, rgba(245, 158, 11, 0.30) 35%, rgba(217, 119, 6, 0.25) 70%, rgba(251, 191, 36, 0.20) 100%);
+  box-shadow: 0 6.857px 27.429px 0 rgba(251, 191, 36, 0.20), 0 0.857px 0 0 rgba(255, 255, 255, 0.20) inset;
+}
+
+.easy-global__item-img-4 {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13.714px;
+  border-radius: 13.714px;
+  border-radius: 13.714px;
+  border: 0.857px solid rgba(236, 72, 153, 0.30);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.40) 0%, rgba(219, 39, 119, 0.30) 35%, rgba(190, 24, 93, 0.25) 70%, rgba(236, 72, 153, 0.20) 100%);
+  box-shadow: 0 6.857px 27.429px 0 rgba(236, 72, 153, 0.20), 0 0.857px 0 0 rgba(255, 255, 255, 0.20) inset;
+}
+
+.easy-global__item-img-5 {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13.714px;
+  border-radius: 13.714px;
+  border-radius: 13.714px;
+  border: 0.857px solid rgba(14, 165, 233, 0.30);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.40) 0%, rgba(2, 132, 199, 0.30) 35%, rgba(3, 105, 161, 0.25) 70%, rgba(14, 165, 233, 0.20) 100%);
+  box-shadow: 0 6.857px 27.429px 0 rgba(14, 165, 233, 0.20), 0 0.857px 0 0 rgba(255, 255, 255, 0.20) inset;
+}
+
+.easy-global__item-text {
+  margin-top: 20px;
+}
+
+.easy-global__item-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > .icon {
+    @include media-breakpoint-up(lg) {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+/* ========================================================================
+ * 별도 준비 없이 상품만 입고하세요
+*/
+.simple-inbound__wrapper {
+  background: linear-gradient(162deg, #EFF6FF 8.24%, #FAF5FF 50%, #FDF2F8 91.76%);
+}
+
+.simple-inbound__gradient-border {
+  border: 4px solid transparent;
+  border-radius: 24px;
+  background-image: linear-gradient(#fff, #fff),
+  linear-gradient(90deg, #155DFC 0%, #9810FA 50%, #E60076 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.simple-inbound__text-wrapper {
+  padding: 30px 10px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 48px 32px;
+  }
+}
+
+.simple-inbound__gradient-text {
+  background: linear-gradient(90deg, #155DFC 0%, #9810FA 50%, #E60076 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================================================================
+ * 원배송 바로출고의 차별화된 서비스
+*/
+.benefit__wrapper {
+  background: linear-gradient(137deg, #F9FAFB 6.63%, #EFF6FF 94.57%);
+}
+
+.benefit__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.benefit__item {
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  background: $white;
+
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 48%;
+  }
+}
+
+.benefit__item-img-1 {
+  display: flex;
+  width: 56px;
+  height: 42px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.25px;
+  background: linear-gradient(143deg, rgba(173, 70, 255, 0.90) 5.36%, rgba(152, 16, 250, 0.90) 94.64%);
+  box-shadow: 0 8.75px 26.25px 0 rgba(152, 16, 250, 0.30);
+}
+
+.benefit__item-img-2 {
+  display: flex;
+  width: 56px;
+  height: 42px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.25px;
+  background: linear-gradient(143deg, rgba(246, 51, 154, 0.90) 5.36%, rgba(230, 0, 118, 0.90) 94.64%);
+  box-shadow: 0 8.75px 26.25px 0 rgba(230, 0, 118, 0.30);
+}
+
+.benefit__item-img-3 {
+  display: flex;
+  width: 56px;
+  height: 42px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.25px;
+  background: linear-gradient(143deg, rgba(0, 187, 167, 0.90) 5.36%, rgba(0, 150, 137, 0.90) 94.64%);
+  box-shadow: 0 8.75px 26.25px 0 rgba(0, 150, 137, 0.30);
+}
+
+.benefit__item-img-4 {
+  display: flex;
+  width: 56px;
+  height: 42px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.25px;
+  background: linear-gradient(143deg, rgba(255, 105, 0, 0.90) 5.36%, rgba(245, 73, 0, 0.90) 94.64%);
+  box-shadow: 0 8.75px 26.25px 0 rgba(245, 73, 0, 0.30);
+}
+
+.benefit__item-img-5 {
+  display: flex;
+  width: 56px;
+  height: 42px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.25px;
+  background: linear-gradient(143deg, rgba(43, 127, 255, 0.90) 5.36%, rgba(21, 93, 252, 0.90) 94.64%);
+  box-shadow: 0 8.75px 26.25px 0 rgba(21, 93, 252, 0.30);
+}
+
+.benefit__item-img-6 {
+  display: flex;
+  width: 56px;
+  height: 42px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.25px;
+  background: linear-gradient(143deg, rgba(255, 32, 86, 0.90) 5.36%, rgba(236, 0, 63, 0.90) 94.64%);
+  box-shadow: 0 8.75px 26.25px 0 rgba(236, 0, 63, 0.30);
+}
+
+.benefit__item-text {
+  margin-top: 37px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 33px;
+  }
+}
