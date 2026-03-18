@@ -228,60 +228,6 @@ summary {
 }
 
 /* ========================================================================
- * 드롭다운
-*/
-/*
-.drop-down__wrapper {
-  position: relative;
-
-  // 드롭다운 클릭
-  .drop-down__link {
-    width: 100%;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: space-between;
-
-    @include media-breakpoint-up(lg) {
-      max-width: 200px;
-    }
-
-    // 드롭다운 클릭 했을때
-    &.is-active {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    .icon-plus {
-      transition: transform .4s ease;
-    }
-
-    &.is-active .icon-plus {
-      transform: rotate(-45deg);
-    }
-  }
-
-  // 드롭다운 목록
-  .drop-down__list {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 37px;
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px 1rem 8px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    transition: transform .4s ease;
-
-    @include media-breakpoint-up(lg) {
-      max-width: 200px;
-    }
-  }
-}
-*/
-
-/* ========================================================================
  * 높이 100%
 */
 .h-100 {
@@ -310,6 +256,28 @@ summary {
   margin-right: auto;
 }
 
+/* ========================================================================
+ * br 줄바꿈
+*/
+// 모바일에서만 줄바꿈
+.br-mobile {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+// 웹에서만 줄바꿈
+.br-pc {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
 
 /* ========================================================================
  * 서브페이지 - 텍스트 앞에 primary 체크 아이콘 있는 p
