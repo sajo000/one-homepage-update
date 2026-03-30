@@ -121,6 +121,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  counter-reset: all-in-one-counter;
 
   @include media-breakpoint-up(lg) {
     flex-direction: row;
@@ -128,11 +129,35 @@
 }
 
 .all-in-one__item {
+  position: relative;
   flex: 1 1 15%;
   padding: 40px 0 32px;
   border: 1px solid #E5E7EB;
   background: $white;
   border-radius: 16px;
+  counter-increment: all-in-one-counter;
+
+  &::before {
+    content: counter(all-in-one-counter);
+    display: flex;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #565656 0%, #232323 100%);
+
+    @include media-breakpoint-up(lg) {
+      top: 12px;
+      right: 12px;
+    }
+  }
 }
 
 .all-in-one__item-img {
