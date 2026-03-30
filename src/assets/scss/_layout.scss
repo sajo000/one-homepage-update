@@ -52,16 +52,18 @@
   line-height: 1;
 
   svg {
-    width: 110px;
+    width: 66px;
     height: auto;
+    aspect-ratio: 33/16;
   }
 
   @include media-breakpoint-up(lg) {
     //height: 32px;
 
     svg {
-      width: 150px;
+      width: 90px;
       height: auto;
+      aspect-ratio: 45/22;
     }
   }
 }
@@ -244,10 +246,14 @@
  * 푸터
 */
 #footer .logo-svg {
-  width: 110px;
+  width: 66px;
+  height: auto;
+  aspect-ratio: 33/16;
 
   @include media-breakpoint-up(lg) {
-    width: 150px;
+    width: 90px;
+    height: auto;
+    aspect-ratio: 45/22;
   }
 }
 
